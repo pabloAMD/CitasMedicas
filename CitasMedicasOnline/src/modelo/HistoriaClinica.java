@@ -1,6 +1,5 @@
 package modelo;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class HistoriaClinica {
@@ -13,8 +12,14 @@ public class HistoriaClinica {
 		super();
 		this.id = id;
 		this.observaciones = observaciones;
-		this.citamedicaList= new ArrayList<CitaMedica>();
 	}
+	
+	
+
+	public HistoriaClinica() {
+		super();
+	}
+
 
 	
 
@@ -48,7 +53,10 @@ public class HistoriaClinica {
 	}
 	
 	
-	
-	
+	public static boolean guardarHistoriaClinica(int id, String observacion) {
+		id = id;
+		observacion = observacion;
+		return true;
+	}
 	
 }
