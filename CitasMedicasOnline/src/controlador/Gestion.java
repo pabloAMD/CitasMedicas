@@ -42,8 +42,6 @@ public class Gestion {
 		especialidad.setId(1);
 		especialidad.setNombreEspecialidad("Cirujano");
 		
-		
-		
 		Medico medico2 = new Medico();
 		medico2.setId_medico(2);
 		medico2.setNombre("Anai");
