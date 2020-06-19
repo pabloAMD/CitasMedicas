@@ -21,6 +21,7 @@ public class HistoriaClinica {
 	}
 
 
+	
 
 	public int getId() {
 		return id;

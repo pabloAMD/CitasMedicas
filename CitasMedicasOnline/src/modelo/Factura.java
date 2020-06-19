@@ -6,8 +6,10 @@ public class Factura {
 	private CitaMedica citaMedica;
 	private double total;
 	
+
 	
 	
+<<<<<<< HEAD
 	public Factura() {
 		super();
 	}
@@ -17,7 +19,16 @@ public class Factura {
 		this.total = total;
 	}
 	public Factura(int codigo, CitaMedica citaMedica, double total) {
+=======
+
+	public Factura() {
+
+>>>>>>> branch 'master' of https://github.com/pabloAMD/CitasMedicas.git
 		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Factura(int codigo, CitaMedica citaMedica, double total) {
+		
 		this.codigo = codigo;
 		this.citaMedica = citaMedica;
 		this.total = total;
@@ -43,11 +54,11 @@ public class Factura {
 	
 	// calcular total factura
 	
-	public double TotalFact(double costoConsulta, int iva, double descuento) {
+	public static double TotalFact(double costoConsulta, int iva, double descuento) {
 		double ivas=(costoConsulta*iva)/100;
 		double des=(costoConsulta*descuento)/100;
-		
 		return (costoConsulta+ivas/des);
+		
 	}
 	
 	

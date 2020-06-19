@@ -5,13 +5,12 @@ public class Paciente extends Persona {
 	private int id_Paciente;
 	private Suscripcion suscripcion;
 	
-	
-	
-	public Paciente(int id_Paciente, Suscripcion suscripcion) {
+
+	public Paciente() {
 		super();
-		this.id_Paciente = id_Paciente;
-		this.suscripcion = suscripcion;
 	}
+	
+
 	@Override
 	public void validarCedula() {
 		
@@ -27,22 +26,7 @@ public class Paciente extends Persona {
 		// TODO Auto-generated method stub
 		
 	}
-	@Override
-	public void crear() {
-		
-		// TODO Auto-generated method stub
-		
-	}
-	@Override
-	public void actualizar() {
-		// TODO Auto-generated method stub
-		
-	}
-	@Override
-	public void eliminar() {
-		// TODO Auto-generated method stub
-		
-	}
+	
 	public int getId_Paciente() {
 		return id_Paciente;
 	}
@@ -56,7 +40,14 @@ public class Paciente extends Persona {
 		this.suscripcion = suscripcion;
 	}
 	
-	
+	public static boolean actualizar(Paciente p) {
+		if (p.getId_Paciente()!=0) {
+			p.setDireccion("Juan Pablo ||");
+			return true;
+		}
+		return false;
+	}
+
 	
 
 }
