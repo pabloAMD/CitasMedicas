@@ -10,10 +10,7 @@ public class Paciente extends Persona {
 		super();
 	}
 	
-<<<<<<< HEAD
-=======
 
->>>>>>> branch 'master' of https://github.com/pabloAMD/CitasMedicas.git
 	@Override
 	public void validarCedula() {
 		

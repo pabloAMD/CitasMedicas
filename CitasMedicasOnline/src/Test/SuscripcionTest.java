@@ -25,6 +25,7 @@ public class SuscripcionTest {
 	@Test
 	public void agregaLibroDiario() {
 		Factura f= new Factura();
+		
 		f.setCodigo(1);
 		f.setTotal(350.87);
 		
