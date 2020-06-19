@@ -1,6 +1,6 @@
 package modelo;
 
-public class Secretaria {
+public class Secretaria extends Persona {
 
 	private Agenda agenda;
 	
@@ -20,6 +20,18 @@ public Secretaria() {
 
 	public void setAgenda(Agenda agenda) {
 		this.agenda = agenda;
+	}
+
+	@Override
+	public void validarCedula() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void validarCorreo() {
+		// TODO Auto-generated method stub
+		
 	}
 	
 	

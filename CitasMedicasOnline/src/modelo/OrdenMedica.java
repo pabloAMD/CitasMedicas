@@ -37,6 +37,14 @@ public class OrdenMedica {
 	public void setReceta(String receta) {
 		this.receta = receta;
 	}
+
+
+	@Override
+	public String toString() {
+		return "OrdenMedica [id=" + id + ", receta=" + receta + "]";
+	}
+	
+	
 	
 	
 }

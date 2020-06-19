@@ -1,5 +1,8 @@
 package modelo;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Consulta {
@@ -7,22 +10,24 @@ public class Consulta {
 	private String hora;
 	private OrdenMedica ordenMedica;
 	private Medico medico;
+	private CitaMedica citaMedica;
 	private Certificado certificado;
 	private String observaciones;
 	private Date fechaConsulta;
-	
+
 	
 	
 	public Consulta() {
 		
 	}
 	
-	public Consulta(String hora, OrdenMedica ordenMedica, Medico medico, Certificado certificado, String observaciones,
+	public Consulta(String hora, OrdenMedica ordenMedica, Medico medico,CitaMedica paciente, Certificado certificado, String observaciones,
 			Date fechaConsulta) {
-		super();
+		
 		this.hora = hora;
 		this.ordenMedica = ordenMedica;
 		this.medico = medico;
+		this.citaMedica = paciente;
 		this.certificado = certificado;
 		this.observaciones = observaciones;
 		this.fechaConsulta = fechaConsulta;
@@ -63,7 +68,49 @@ public class Consulta {
 	public void setFechaConsulta(Date fechaConsulta) {
 		this.fechaConsulta = fechaConsulta;
 	}
+	public CitaMedica getCitaMedica() {
+		return citaMedica;
+	}
+
+	public void setCitaMedica(CitaMedica citaMedica) {
+		this.citaMedica = citaMedica;
+	}
 	
+	
+	
+	
+	@Override
+	public String toString() {
+		return "Consulta [hora=" + hora + ", ordenMedica=" + ordenMedica + ", medico=" + medico + ", citaMedica="
+				+ citaMedica + ", certificado=" + certificado + ", observaciones=" + observaciones + ", fechaConsulta="
+				+ fechaConsulta + "]";
+	}
+
+	public static boolean crearCertificado(int id, String entrada, String motivo, Consulta consulta) {
+	
+		Certificado certific = new Certificado();
+		
+		DateFormat format = new SimpleDateFormat("DD/MM/YYYY"); // Creamos un formato de fecha
+		Date fecha = null;
+		try {
+			fecha = format.parse(entrada);
+			certific.setCodigo(id);
+			certific.setMotivo(motivo);
+			certific.setFecha(fecha);
+			consulta.setCertificado(certific);
+			
+			
+			return true;
+		} catch (ParseException e) {
+			
+			e.printStackTrace();
+			return false;
+		} 
+		
+		
+		
+		
+	}
 	
 	
 	

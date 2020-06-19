@@ -28,22 +28,8 @@ public class Paciente extends Persona {
 		// TODO Auto-generated method stub
 		
 	}
-	@Override
-	public void crear() {
-		
-		// TODO Auto-generated method stub
-		
-	}
-	@Override
-	public void actualizar() {
-		// TODO Auto-generated method stub
-		
-	}
-	@Override
-	public void eliminar() {
-		// TODO Auto-generated method stub
-		
-	}
+
+
 	public int getId_Paciente() {
 		return id_Paciente;
 	}

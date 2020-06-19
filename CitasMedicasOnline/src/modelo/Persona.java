@@ -11,9 +11,7 @@ public abstract class Persona{
 	
 	public abstract void validarCedula();
 	public abstract void validarCorreo();
-	public abstract void crear();
-	public abstract void actualizar();
-	public abstract void eliminar();
+
 	public String getNombre() {
 		return nombre;
 	}

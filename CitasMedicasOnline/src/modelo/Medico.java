@@ -3,7 +3,7 @@ package modelo;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Medico {
+public class Medico extends Persona{
 	
 	private int id_medico;
 	private Especialidad especialidad;
@@ -12,7 +12,7 @@ public class Medico {
 	private Secretaria secretaria;
 	
 	public Medico() {
-		this.certificados = new ArrayList<Certificado>();
+		
 		
 	}
 	
@@ -20,12 +20,12 @@ public class Medico {
 
 	public Medico(int id_medico, Especialidad especialidad, String horarioAtencion,
 			Secretaria secretaria) {
-		super();
+		
 		this.id_medico = id_medico;
 		this.especialidad = especialidad;
 		this.horarioAtencion = horarioAtencion;
-	
 		this.secretaria = secretaria;
+		this.certificados = new ArrayList<Certificado>();
 	}
 
 
@@ -74,7 +74,81 @@ public class Medico {
 		this.certificados.add(certificado);
 		
 	}
+
+
+
+	@Override
+	public void validarCedula() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+	@Override
+	public void validarCorreo() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+	@Override
+	public String toString() {
+		return "Medico [id_medico=" + id_medico + ", especialidad=" + especialidad + ", horarioAtencion="
+				+ horarioAtencion + ", certificados=" + certificados + ", secretaria=" + secretaria + "]";
+	}
 	
+	
+	
+	public static boolean actualizarHorarioAtencion(Medico medico,String horarioNuevo) {
+		
+		if(medico != null) {
+			medico.setHorarioAtencion(horarioNuevo);
+			return true;
+		}else {
+			return false;
+		}
+		
+		
+	}
+	
+	public static boolean validarCertificado(Consulta consulta) {
+		if(consulta != null) {
+		consulta.getCertificado().setEstadoVlidacion(true);
+		return true;
+		}else {
+			return false;
+		}
+		
+		
+		
+	}
+	
+	
+	public static boolean crearOrdenMedica(Consulta consulta, OrdenMedica ordenMedica) {
+		
+		if((consulta != null)&&(ordenMedica != null)) {
+			consulta.setOrdenMedica(ordenMedica);
+			return true;
+		}else {
+			return false;
+		}
+	
+	}
+	
+	
+	
+	public boolean crearOrdenMedica(int id, String textoReceta) {
+		if( textoReceta != null) {
+			OrdenMedica receta = new OrdenMedica();
+			receta.setId(id);
+			receta.setReceta(textoReceta);
+		return true;
+		}
+		return false;
+	}
+		
 	
 	
 	
