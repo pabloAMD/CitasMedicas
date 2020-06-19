@@ -10,6 +10,20 @@ public class CitaMedica {
 	private int turno;
 	private Date fecha;
 	private double precio;
+	
+	
+	public static boolean crearCita (int id, Paciente paciente, String motivo, int turno,  double precio) {
+		
+		id = id;
+		paciente = paciente;
+		motivo = motivo;
+		turno = turno;
+		precio=precio;
+		
+		return true;
+	}
+	
+	
 	public int getId() {
 		return id;
 	}

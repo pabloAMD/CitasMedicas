@@ -16,6 +16,7 @@ public class HistoriaClinica {
 		this.citamedicaList= new ArrayList<CitaMedica>();
 	}
 
+	
 
 	public int getId() {
 		return id;

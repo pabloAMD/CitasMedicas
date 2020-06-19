@@ -13,6 +13,7 @@ public class Paciente extends Persona {
 		this.id_Paciente = id_Paciente;
 		this.suscripcion = suscripcion;
 	}
+	
 	@Override
 	public void validarCedula() {
 		

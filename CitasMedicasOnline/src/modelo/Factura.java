@@ -7,6 +7,9 @@ public class Factura {
 	private double total;
 	
 	
+	public Factura() {
+		
+	}
 	public Factura(int codigo, CitaMedica citaMedica, double total) {
 		super();
 		this.codigo = codigo;
@@ -34,11 +37,11 @@ public class Factura {
 	
 	// calcular total factura
 	
-	public double TotalFact(double costoConsulta, int iva, double descuento) {
+	public static double TotalFact(double costoConsulta, int iva, double descuento) {
 		double ivas=(costoConsulta*iva)/100;
 		double des=(costoConsulta*descuento)/100;
-		
 		return (costoConsulta+ivas/des);
+		
 	}
 	
 	
