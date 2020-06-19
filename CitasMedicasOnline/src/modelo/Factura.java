@@ -6,9 +6,13 @@ public class Factura {
 	private CitaMedica citaMedica;
 	private double total;
 	
-	
-	public Factura(int codigo, CitaMedica citaMedica, double total) {
+
+	public Factura() {
 		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Factura(int codigo, CitaMedica citaMedica, double total) {
+		
 		this.codigo = codigo;
 		this.citaMedica = citaMedica;
 		this.total = total;
@@ -31,18 +35,15 @@ public class Factura {
 	public void setTotal(double total) {
 		this.total = total;
 	}
-	
+	 
 	// calcular total factura
 	
-	public double TotalFact(double costoConsulta, int iva, double descuento) {
+	public static double TotalFact(double costoConsulta, int iva, double descuento) {
 		double ivas=(costoConsulta*iva)/100;
 		double des=(costoConsulta*descuento)/100;
+		return ((costoConsulta+ivas)-des);
 		
-		return (costoConsulta+ivas/des);
 	}
-	
-	
-	
-	
+
 	
 }

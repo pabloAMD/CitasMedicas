@@ -1,6 +1,5 @@
 package modelo;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class HistoriaClinica {
@@ -13,9 +12,16 @@ public class HistoriaClinica {
 		super();
 		this.id = id;
 		this.observaciones = observaciones;
-		this.citamedicaList= new ArrayList<CitaMedica>();
+	}
+	 
+	
+
+	public HistoriaClinica() {
+		super();
 	}
 
+
+	
 
 	public int getId() {
 		return id;
@@ -47,7 +53,12 @@ public class HistoriaClinica {
 	}
 	
 	
-	
-	
+	public static boolean guardarHistoriaClinica(int id, String observacion) {
+		HistoriaClinica hc = new HistoriaClinica();
+		hc.setId(id);
+		hc.setObservaciones(observacion);
+		System.out.println("Historia Clinica Creada");
+		return true;
+	}
 	
 }

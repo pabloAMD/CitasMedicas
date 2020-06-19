@@ -10,6 +10,20 @@ public class CitaMedica {
 	private int turno;
 	private Date fecha;
 	private double precio;
+	
+	
+	public static boolean crearCita (int id, Paciente paciente, String motivo, int turno,  double precio) {
+		
+		id = id;
+		paciente = paciente;
+		motivo = motivo;
+		turno = turno;
+		precio=precio;
+		
+		return true;
+	}
+	
+	
 	public int getId() {
 		return id;
 	}
@@ -46,6 +60,36 @@ public class CitaMedica {
 	public void setPrecio(double precio) {
 		this.precio = precio;
 	}
+
+
+	/**
+	 * @param id
+	 * @param paciente
+	 * @param motivo
+	 * @param turno
+	 * @param fecha
+	 * @param precio
+	 */
+	public CitaMedica(int id, Paciente paciente, String motivo, int turno, Date fecha, double precio) {
+		super();
+		this.id = id;
+		this.paciente = paciente;
+		this.motivo = motivo;
+		this.turno = turno;
+		this.fecha = fecha;
+		this.precio = precio;
+	}
+
+
+	/**
+	 * 
+	 */
+	public CitaMedica() {
+		super();
+	}
+
+
+	
 	
 	
 	

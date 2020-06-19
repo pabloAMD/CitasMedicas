@@ -2,13 +2,26 @@ package modelo;
 
 public abstract class Persona{
 	
-	private String nombre;
-	private String apellido;
-	private String direccion;
-	private String telefono;
-	private String cedula;
-	private String email;
+	public String nombre;
+	public String apellido;
+	public String direccion;
+	public String telefono;
+	public String cedula;
+	public String email;
 	
+	
+	public Persona() {
+		super();
+	}
+	public Persona(String nombre, String apellido, String direccion, String telefono, String cedula, String email) {
+		super();
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.direccion = direccion;
+		this.telefono = telefono;
+		this.cedula = cedula;
+		this.email = email;
+	}
 	public abstract void validarCedula();
 	public abstract void validarCorreo();
 
@@ -48,7 +61,6 @@ public abstract class Persona{
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
 	
 	
 }

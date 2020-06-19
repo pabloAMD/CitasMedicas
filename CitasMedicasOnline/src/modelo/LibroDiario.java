@@ -8,8 +8,14 @@ public class LibroDiario {
 	private Factura factura;
 	
 	
-	public LibroDiario(Date fecha, Factura factura) {
+	
+	public LibroDiario() {
 		super();
+		// TODO Auto-generated constructor stub
+	}
+
+
+	public LibroDiario(Date fecha, Factura factura) {
 		this.fecha = fecha;
 		this.factura = factura;
 	}
@@ -34,6 +40,9 @@ public class LibroDiario {
 		this.factura = factura;
 	}
 	
+	public static double calcularEgresos(Factura f) {
+		return f.getTotal();
+	}
 	
 	
 	
