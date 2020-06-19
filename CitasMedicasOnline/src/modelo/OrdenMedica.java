@@ -18,7 +18,7 @@ public class OrdenMedica {
 		this.receta = receta;
 	}
 
-
+ 
 	public int getId() {
 		return id;
 	}

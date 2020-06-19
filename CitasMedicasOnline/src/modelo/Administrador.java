@@ -8,7 +8,7 @@ public class Administrador {
 	private Gestion ges;
 	
 	
-	public Administrador() {
+	public Administrador() { 
 		ges = new Gestion();
 		
 		

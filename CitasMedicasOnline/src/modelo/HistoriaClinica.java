@@ -13,7 +13,7 @@ public class HistoriaClinica {
 		this.id = id;
 		this.observaciones = observaciones;
 	}
-	
+	 
 	
 
 	public HistoriaClinica() {

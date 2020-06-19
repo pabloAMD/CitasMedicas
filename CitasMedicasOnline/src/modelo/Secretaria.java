@@ -1,18 +1,28 @@
 package modelo;
 
-public class Secretaria {
+public class Secretaria extends Persona{
 
-	private Agenda agenda;
+	public Agenda agenda;
 	
 public Secretaria() {
 		
 		
 	}
 
+
+	public Secretaria(String nombre, String apellido, String direccion, String telefono, String cedula, String email,Agenda agenda) {
+	super(nombre, apellido, direccion, telefono, cedula, email);
+	this.agenda=agenda;
+	// TODO Auto-generated constructor stub
+}
+ 
+
 	public Secretaria(Agenda agenda) {
 		
 		this.agenda = agenda;
 	}
+	
+	
 
 	public Agenda getAgenda() {
 		return agenda;
@@ -20,6 +30,18 @@ public Secretaria() {
 
 	public void setAgenda(Agenda agenda) {
 		this.agenda = agenda;
+	}
+
+	@Override
+	public void validarCedula() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void validarCorreo() {
+		// TODO Auto-generated method stub
+		
 	}
 	
 	
