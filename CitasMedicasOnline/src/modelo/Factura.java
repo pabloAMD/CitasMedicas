@@ -39,7 +39,7 @@ public class Factura {
 	public void setTotal(double total) {
 		this.total = total;
 	}
-	
+	 
 	// calcular total factura
 	
 	public static double TotalFact(double costoConsulta, int iva, double descuento) {

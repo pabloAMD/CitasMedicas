@@ -6,7 +6,7 @@ public class Especialidad {
 	public String nombreEspecialidad;
 	
 	public Especialidad() {
-		
+		 
 	}
 	
 

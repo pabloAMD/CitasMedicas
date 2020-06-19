@@ -15,7 +15,7 @@ public Secretaria() {
 	this.agenda=agenda;
 	// TODO Auto-generated constructor stub
 }
-
+ 
 
 	public Secretaria(Agenda agenda) {
 		

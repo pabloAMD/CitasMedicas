@@ -185,7 +185,7 @@ public class Gestion {
 		
 		System.out.println("medico creado");
 		return true;
-	}
+	} 
 	
 	public static boolean crearPaciente(String nombre, String apellido, String direccion, String telefono, String cedula, 
 			String email,Suscripcion suscripcion) {
