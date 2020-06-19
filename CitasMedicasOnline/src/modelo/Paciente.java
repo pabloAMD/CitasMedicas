@@ -7,7 +7,6 @@ public class Paciente extends Persona {
 	
 	
 	
-	
 	public Paciente(int id_Paciente, Suscripcion suscripcion) {
 		super();
 		this.id_Paciente = id_Paciente;
