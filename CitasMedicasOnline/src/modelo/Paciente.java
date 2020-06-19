@@ -48,6 +48,17 @@ public class Paciente extends Persona {
 		return false;
 	}
 
-	
 
+	/**
+	 * @param id_Paciente
+	 * @param suscripcion
+	 */
+	public Paciente(int id_Paciente, Suscripcion suscripcion) {
+		super();
+		this.id_Paciente = id_Paciente;
+		this.suscripcion = suscripcion;
+	}
+
+	
+	
 }

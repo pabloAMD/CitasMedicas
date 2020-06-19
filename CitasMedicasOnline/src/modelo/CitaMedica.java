@@ -60,6 +60,35 @@ public class CitaMedica {
 	public void setPrecio(double precio) {
 		this.precio = precio;
 	}
+
+
+	/**
+	 * @param id
+	 * @param paciente
+	 * @param motivo
+	 * @param turno
+	 * @param fecha
+	 * @param precio
+	 */
+	public CitaMedica(int id, Paciente paciente, String motivo, int turno, Date fecha, double precio) {
+		super();
+		this.id = id;
+		this.paciente = paciente;
+		this.motivo = motivo;
+		this.turno = turno;
+		this.fecha = fecha;
+		this.precio = precio;
+	}
+
+
+	/**
+	 * 
+	 */
+	public CitaMedica() {
+		super();
+	}
+
+
 	
 	
 	
