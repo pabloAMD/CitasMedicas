@@ -24,7 +24,6 @@ public class LibroDiarioEmpresaTest {
 		
 		CitaMedica cm=new CitaMedica(1,p,"Dolor Estomacal",5,null,20);		
 		Factura f=new Factura(1, cm, 20.50);
-		PagoSuscripcion pg=new PagoSuscripcion(1, f);
 		
 		assertTrue(LibroDiarioEmpresa.guardarSuscripcionPagos(1, f)==true);
 		
