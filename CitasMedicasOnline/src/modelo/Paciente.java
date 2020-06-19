@@ -5,9 +5,12 @@ public class Paciente extends Persona {
 	private int id_Paciente;
 	private Suscripcion suscripcion;
 	
+
 	public Paciente() {
 		super();
 	}
+	
+
 	@Override
 	public void validarCedula() {
 		
