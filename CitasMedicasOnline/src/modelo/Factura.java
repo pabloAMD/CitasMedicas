@@ -32,6 +32,14 @@ public class Factura {
 		this.total = total;
 	}
 	
+	// calcular total factura
+	
+	public double TotalFact(double costoConsulta, int iva, double descuento) {
+		double ivas=(costoConsulta*iva)/100;
+		double des=(costoConsulta*descuento)/100;
+		
+		return (costoConsulta+ivas/des);
+	}
 	
 	
 	

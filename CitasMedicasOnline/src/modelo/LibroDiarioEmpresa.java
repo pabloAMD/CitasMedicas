@@ -51,6 +51,18 @@ public class LibroDiarioEmpresa {
 		this.pagSubscripcionesList.add(paso);
 	}
 	
+	//actualizar saldo ingresos
+	public double saldoTotalIngresos(double saldo,double valFactura)
+	
+	{
+		return saldo+valFactura;
+	}
+	//actualizar saldo egresos
+	public double saldoTotalEgresos(double saldo,double pagos)
+	
+	{
+		return saldo-pagos;
+	}
 	
 	
 	
