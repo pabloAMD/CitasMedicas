@@ -7,6 +7,15 @@ public class Factura {
 	private double total;
 	
 	
+	
+	public Factura() {
+		super();
+	}
+	public Factura(int codigo, double total) {
+		super();
+		this.codigo = codigo;
+		this.total = total;
+	}
 	public Factura(int codigo, CitaMedica citaMedica, double total) {
 		super();
 		this.codigo = codigo;

@@ -64,7 +64,11 @@ public class LibroDiarioEmpresa {
 		return saldo-pagos;
 	}
 	
-	
+	public static boolean guardarSuscripcionPagos(int id, Factura facturas) {
+		id = id;
+		facturas=facturas;
+		return true;
+	}
 	
 	
 

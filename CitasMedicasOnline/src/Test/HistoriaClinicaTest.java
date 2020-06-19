@@ -13,7 +13,7 @@ public class HistoriaClinicaTest {
 	
 	@Test
 	public void guardarRegistroClinico() {
-		
+	
 	assertTrue(HistoriaClinica.guardarHistoriaClinica(1,"Tomar Mucha agua")==true);
 		
 	}
