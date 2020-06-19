@@ -7,8 +7,13 @@ public class Factura {
 	private double total;
 	
 	
-	public Factura(int codigo, CitaMedica citaMedica, double total) {
+	
+	public Factura() {
 		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Factura(int codigo, CitaMedica citaMedica, double total) {
+		
 		this.codigo = codigo;
 		this.citaMedica = citaMedica;
 		this.total = total;

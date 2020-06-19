@@ -1,6 +1,8 @@
 package modelo;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class Suscripcion {
@@ -9,8 +11,14 @@ public class Suscripcion {
 	private List<LibroDiario> libroDiarioList;
 	
 	
-	public Suscripcion(int id, double saldo) {
+	
+	public Suscripcion() {
 		super();
+		// TODO Auto-generated constructor stub
+	}
+
+
+	public Suscripcion(int id, double saldo) {
 		this.id = id;
 		this.saldo = saldo;
 		this.libroDiarioList = new ArrayList<LibroDiario>();
@@ -56,6 +64,14 @@ public class Suscripcion {
 		return saldoActual-gasto;	
 	}
 	
+	public static boolean agregarLibroDiario(Date fecha, Factura factura) {
+		SimpleDateFormat objSDF = new SimpleDateFormat("dd-MM-yyyy");
+		System.out.println(objSDF.format(fecha));
+		List<LibroDiario> libroDiarioL = new ArrayList<LibroDiario>();
+		LibroDiario lDiario= new LibroDiario(fecha, factura);
+		libroDiarioL.add(lDiario);
+		return true;
+	}
 	
 	
 	
