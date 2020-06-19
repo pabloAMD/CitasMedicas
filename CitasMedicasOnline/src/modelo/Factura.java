@@ -9,21 +9,14 @@ public class Factura {
 
 	
 	
-<<<<<<< HEAD
-	public Factura() {
-		super();
-	}
+
 	public Factura(int codigo, double total) {
 		super();
 		this.codigo = codigo;
 		this.total = total;
 	}
-	public Factura(int codigo, CitaMedica citaMedica, double total) {
-=======
 
 	public Factura() {
-
->>>>>>> branch 'master' of https://github.com/pabloAMD/CitasMedicas.git
 		super();
 		// TODO Auto-generated constructor stub
 	}
