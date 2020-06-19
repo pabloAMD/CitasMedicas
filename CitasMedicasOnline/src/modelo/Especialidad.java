@@ -2,8 +2,8 @@ package modelo;
 
 public class Especialidad {
 	
-	private int id;
-	private String nombreEspecialidad;
+	public int id;
+	public String nombreEspecialidad;
 	
 	public Especialidad() {
 		
