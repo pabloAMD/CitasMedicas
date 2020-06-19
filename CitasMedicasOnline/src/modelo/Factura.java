@@ -6,16 +6,12 @@ public class Factura {
 	private CitaMedica citaMedica;
 	private double total;
 	
+
 	
-<<<<<<< HEAD
-	public Factura() {
-		
-	}
-	public Factura(int codigo, CitaMedica citaMedica, double total) {
-=======
 	
+
 	public Factura() {
->>>>>>> branch 'master' of https://github.com/pabloAMD/CitasMedicas.git
+
 		super();
 		// TODO Auto-generated constructor stub
 	}
