@@ -46,6 +46,18 @@ public class Suscripcion {
 		this.libroDiarioList = libroDiarioList;
 	}
 	
+	public static double agregarSaldo(double valor) {
+		double saldoActual=130.50;
+		return saldoActual+valor;			
+	}
+	
+	public static double actualizarSaldo(double gasto){
+		double saldoActual=181.00;
+		return saldoActual-gasto;	
+	}
+	
+	
+	
 	
 	
 	
