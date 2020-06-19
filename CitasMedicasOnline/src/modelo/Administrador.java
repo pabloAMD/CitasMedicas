@@ -15,6 +15,13 @@ public class Administrador {
 		
 	}
 	
+	//calcular Sueldo Total
+	
+	public double CalcularSueldo(double sueldo,double comision,double descuento) {
+		return ((sueldo+comision)-descuento);
+		
+	}
+	
 	
 	
 	
