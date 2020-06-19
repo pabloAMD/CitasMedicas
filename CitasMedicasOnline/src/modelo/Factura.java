@@ -10,8 +10,13 @@ public class Factura {
 	
 	
 
-	public Factura() {
+	public Factura(int codigo, double total) {
+		super();
+		this.codigo = codigo;
+		this.total = total;
+	}
 
+	public Factura() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
