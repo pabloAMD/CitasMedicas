@@ -41,8 +41,11 @@ public class LibroDiario {
 	}
 	
 	public static double calcularEgresos(Factura f) {
-		return f.getTotal();
+		double n= Factura.TotalFact(300, 12, 20);
+		System.out.println("total"+n);
+		return n;
 	}
+	
 	
 	
 	
