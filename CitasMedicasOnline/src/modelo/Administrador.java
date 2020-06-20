@@ -11,8 +11,6 @@ public class Administrador {
 	public Administrador() { 
 		ges = new Gestion();
 		
-		
-		
 	}
 	
 	//calcular Sueldo Total

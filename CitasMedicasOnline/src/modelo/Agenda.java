@@ -29,37 +29,21 @@ public class Agenda {
 		this.consultalist = consultalist;
 	}
 
-	public void agregarConsulta(Consulta consulta) {
-
-		this.consultalist.add(consulta);
-
-	}
-
+	
 	public static boolean guardarConsulta(Consulta consulta) {
-		List<Consulta> consultalist= new ArrayList<Consulta>();
+		List<Consulta> consultalist = new ArrayList<Consulta>();
 		consultalist.add(consulta);
 		System.out.println(consultalist.size());
-		
-		if (consultalist.size()>0) {
-			return true;
-		}else {
-			return false;
-		}
-		
+		return true;
 
 	}
 
 	public static boolean actualizarConsulta(Consulta consulta) {
-	List<Consulta> consultalist= new ArrayList<Consulta>();
-	consultalist.add(consulta);
-	consulta.setObservaciones("cancer terminal");
-	consultalist.add(consultalist.indexOf(consulta),consulta);
-	if (consultalist.size()>0) {
+		List<Consulta> consultalist = new ArrayList<Consulta>();
+		consultalist.add(consulta);
+		consulta.setObservaciones("cancer terminal");
+		consultalist.add(consultalist.indexOf(consulta), consulta);
 		return true;
-	}else {
-		return false;
 	}
-	}
-	
-	
+
 }

@@ -7,13 +7,7 @@ public class HistoriaClinica {
 	private String observaciones;
 	private List<CitaMedica> citamedicaList;
 	
-	
-	public HistoriaClinica(int id, String observaciones) {
-		super();
-		this.id = id;
-		this.observaciones = observaciones;
-	}
-	 
+
 	
 
 	public HistoriaClinica() {

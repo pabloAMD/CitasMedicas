@@ -22,8 +22,7 @@ public abstract class Persona{
 		this.cedula = cedula;
 		this.email = email;
 	}
-	public abstract void validarCedula();
-	public abstract void validarCorreo();
+
 
 	public String getNombre() {
 		return nombre;

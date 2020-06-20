@@ -10,12 +10,6 @@ public class PagoSuscripcion {
 		
 	}
 
-	public PagoSuscripcion(int id, Factura factura) {
-		super();
-		this.id = id;
-		this.factura = factura;
-	}
-
 	public int getId() {
 		return id;
 	}
@@ -24,14 +18,6 @@ public class PagoSuscripcion {
 		this.id = id;
 	}
 
-	public Factura getFactura() {
-		return factura;
-	}
-
-	public void setFactura(Factura factura) {
-		this.factura = factura;
-	}
-	
 	
 
 }

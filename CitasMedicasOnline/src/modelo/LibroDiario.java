@@ -8,16 +8,15 @@ public class LibroDiario {
 	private Factura factura;
 	
 	
-	
-	public LibroDiario() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-
 
 	public LibroDiario(Date fecha, Factura factura) {
 		this.fecha = fecha;
 		this.factura = factura;
+	}
+
+
+	public LibroDiario() {
+		// TODO Auto-generated constructor stub
 	}
 
 
@@ -31,14 +30,6 @@ public class LibroDiario {
 	}
 
 
-	public Factura getFactura() {
-		return factura;
-	}
-
-
-	public void setFactura(Factura factura) {
-		this.factura = factura;
-	}
 	
 	public static double calcularEgresos(Factura f) {
 		double n= Factura.TotalFact(300, 12, 20);

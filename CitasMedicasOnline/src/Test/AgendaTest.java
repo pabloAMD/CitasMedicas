@@ -2,6 +2,7 @@ package Test;
 
 import static org.junit.Assert.*;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 import org.junit.Test;
@@ -41,6 +42,11 @@ public class AgendaTest {
 		om.setId(3);
 		om.setReceta("lemonflu");
 		
+		Agenda a= new Agenda();
+		a.setId(23);
+		a.setConsultalist(new ArrayList<Consulta>());
+		a.getId();
+		a.getConsultalist();
 		
 		Consulta c= new Consulta();
 		c.setHora("15:00");

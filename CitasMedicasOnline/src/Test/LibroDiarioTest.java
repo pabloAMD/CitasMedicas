@@ -12,7 +12,7 @@ public class LibroDiarioTest {
 	@Test
 	public void calcularEgresos() {
 		Factura f= new Factura();
-		assertTrue(LibroDiario.calcularEgresos(f)==316.0);
+		assertTrue(LibroDiario.calcularEgresos(f)==276.0);
 	}
 
 }

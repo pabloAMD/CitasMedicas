@@ -11,15 +11,6 @@ public class Sueldo {
 		
 	}
 	
-	public Sueldo(double valor, double comisiones, double multas) {
-		
-		this.valor = valor;
-		this.comisiones = comisiones;
-		this.multas = multas;
-	}
-
-
-
 	public double getValor() {
 		return valor;
 	}

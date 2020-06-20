@@ -20,18 +20,7 @@ public class Consulta {
 	public Consulta() {
 		
 	}
-	
-	public Consulta(String hora, OrdenMedica ordenMedica, Medico medico,CitaMedica paciente, Certificado certificado, String observaciones,
-			Date fechaConsulta) {
-		
-		this.hora = hora;
-		this.ordenMedica = ordenMedica;
-		this.medico = medico;
-		this.citaMedica = paciente;
-		this.certificado = certificado;
-		this.observaciones = observaciones;
-		this.fechaConsulta = fechaConsulta;
-	}
+
 	public String getHora() {
 		return hora;
 	}
@@ -80,12 +69,7 @@ public class Consulta {
 	
 
 	
-	@Override
-	public String toString() {
-		return "Consulta [hora=" + hora + ", ordenMedica=" + ordenMedica + ", medico=" + medico + ", citaMedica="
-				+ citaMedica + ", certificado=" + certificado + ", observaciones=" + observaciones + ", fechaConsulta="
-				+ fechaConsulta + "]";
-	}
+
 
 	public static boolean crearCertificado(int id, String entrada, String motivo, Consulta consulta) {
 	
@@ -104,7 +88,7 @@ public class Consulta {
 			return true;
 		} catch (ParseException e) {
 			
-			e.printStackTrace();
+	
 			return false;
 		} 
 		

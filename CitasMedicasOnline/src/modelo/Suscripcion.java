@@ -44,18 +44,9 @@ public class Suscripcion {
 		this.saldo = saldo;
 	}
 
-
-	public List<LibroDiario> getLibroDiarioList() {
-		return libroDiarioList;
-	}
-
-
-	public void setLibroDiarioList(List<LibroDiario> libroDiarioList) {
-		this.libroDiarioList = libroDiarioList;
-	}
-	
 	public static double agregarSaldo(double valor) {
 		double saldoActual=130.50;
+		System.out.println(saldoActual+valor);
 		return saldoActual+valor;			
 	}
 	
