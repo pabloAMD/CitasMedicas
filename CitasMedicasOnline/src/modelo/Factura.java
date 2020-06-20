@@ -44,12 +44,15 @@ public class Factura {
 	public void setTotal(double total) {
 		this.total = total;
 	}
+	
+	
 	 
 	// calcular total factura
 	
 	public static double TotalFact(double costoConsulta, int iva, double descuento) {
 		double ivas=(costoConsulta*iva)/100;
-		double des=(costoConsulta*descuento)/100;
+		double des=(ivas*descuento)/100;
+		System.out.println("valor "+((costoConsulta+ivas)-des));
 		return ((costoConsulta+ivas)-des);
 		
 	}
