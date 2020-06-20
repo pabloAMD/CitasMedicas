@@ -13,7 +13,7 @@ public class HistoriaClinica {
 		this.id = id;
 		this.observaciones = observaciones;
 	}
-	
+	 
 	
 
 	public HistoriaClinica() {
@@ -54,8 +54,10 @@ public class HistoriaClinica {
 	
 	
 	public static boolean guardarHistoriaClinica(int id, String observacion) {
-		id = id;
-		observacion = observacion;
+		HistoriaClinica hc = new HistoriaClinica();
+		hc.setId(id);
+		hc.setObservaciones(observacion);
+		System.out.println("Historia Clinica Creada");
 		return true;
 	}
 	
