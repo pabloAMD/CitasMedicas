@@ -7,15 +7,6 @@ public class Factura {
 	private double total;
 	
 
-	
-	
-
-	public Factura(int codigo, double total) {
-		super();
-		this.codigo = codigo;
-		this.total = total;
-	}
-
 	public Factura() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -56,9 +47,6 @@ public class Factura {
 		return ((costoConsulta+ivas)-des);
 		
 	}
-	
-	
-	
-	
+
 	
 }

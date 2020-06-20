@@ -24,7 +24,7 @@ public abstract class Persona{
 	}
 	public abstract void validarCedula();
 	public abstract void validarCorreo();
-	
+
 	public String getNombre() {
 		return nombre;
 	}
@@ -61,7 +61,6 @@ public abstract class Persona{
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
 	
 	
 }

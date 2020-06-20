@@ -1,6 +1,8 @@
 package modelo;
 
+
 public class Secretaria extends Persona{
+
 
 	public Agenda agenda;
 	
@@ -43,6 +45,7 @@ public Secretaria() {
 		// TODO Auto-generated method stub
 		
 	}
+	
 	
 	
 	
