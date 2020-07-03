@@ -27,6 +27,7 @@ public class Consulta implements Serializable {
 	public Consulta() {
 		
 	}
+
 	
 	public Consulta(int codigo, String hora, OrdenMedica ordenMedica, Medico medico,CitaMedica paciente, Certificado certificado, String observaciones,
 			Date fechaConsulta) {
@@ -48,6 +49,8 @@ public class Consulta implements Serializable {
 	public void setCodigo(int codigo) {
 		this.codigo = codigo;
 	}
+=======
+>>>>>>> branch 'master' of https://github.com/pabloAMD/CitasMedicas.git
 
 	public String getHora() {
 		return hora;
@@ -95,13 +98,9 @@ public class Consulta implements Serializable {
 	
 	
 	
+
 	
-	@Override
-	public String toString() {
-		return "Consulta [hora=" + hora + ", ordenMedica=" + ordenMedica + ", medico=" + medico + ", citaMedica="
-				+ citaMedica + ", certificado=" + certificado + ", observaciones=" + observaciones + ", fechaConsulta="
-				+ fechaConsulta + "]";
-	}
+
 
 	public static boolean crearCertificado(int id, String entrada, String motivo, Consulta consulta) {
 	
@@ -120,7 +119,7 @@ public class Consulta implements Serializable {
 			return true;
 		} catch (ParseException e) {
 			
-			e.printStackTrace();
+	
 			return false;
 		} 
 		
@@ -131,5 +130,6 @@ public class Consulta implements Serializable {
 	
 	
 	
+
 
 }

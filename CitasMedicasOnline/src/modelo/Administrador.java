@@ -13,9 +13,7 @@ public class Administrador  extends Persona implements Serializable{
 	
 	private int id;
 	
-	public Administrador() { 
-		
-	}
+	
 	
 	//calcular Sueldo Total
 	

@@ -66,7 +66,6 @@ public class MedicoTest {
 			fecha = format.parse(entrada);
 		} catch (ParseException e) {
 			
-			e.printStackTrace();
 		} 
 		con2.setFechaConsulta(fecha);
 		
@@ -103,7 +102,6 @@ public class MedicoTest {
 			fecha = format.parse(entrada);
 		} catch (ParseException e) {
 			
-			e.printStackTrace();
 		} 
 		con2.setFechaConsulta(fecha);
 		

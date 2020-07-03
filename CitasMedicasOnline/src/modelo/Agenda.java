@@ -12,10 +12,10 @@ public class Agenda implements Serializable{
 	@Id
 	private int id;
 	private List<Consulta> consultalist;
-	
+
 	public Agenda() {
 		consultalist = new ArrayList<Consulta>();
-		
+
 	}
 
 	public int getId() {
@@ -33,13 +33,22 @@ public class Agenda implements Serializable{
 	public void setConsultalist(List<Consulta> consultalist) {
 		this.consultalist = consultalist;
 	}
+
 	
-	public void agregarConsulta( Consulta consulta) {
-		
-		this.consultalist.add(consulta);
-		
+	public static boolean guardarConsulta(Consulta consulta) {
+		List<Consulta> consultalist = new ArrayList<Consulta>();
+		consultalist.add(consulta);
+		System.out.println(consultalist.size());
+		return true;
+
 	}
-	
-	
+
+	public static boolean actualizarConsulta(Consulta consulta) {
+		List<Consulta> consultalist = new ArrayList<Consulta>();
+		consultalist.add(consulta);
+		consulta.setObservaciones("cancer terminal");
+		consultalist.add(consultalist.indexOf(consulta), consulta);
+		return true;
+	}
 
 }

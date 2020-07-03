@@ -1,5 +1,6 @@
 package modelo;
 
+<<<<<<< HEAD
 import java.io.Serializable;
 
 import javax.persistence.Entity;
@@ -10,54 +11,11 @@ public class Secretaria extends Persona implements Serializable{
 
 	private Agenda agenda;
 	
-public Secretaria() {
-		
-		
-	}
-
-
-	
- 
-
-	public Secretaria(int codigo, String nombre, String apellido, String direccion, String telefono, String cedula,
-		String email) {
-	super(codigo, nombre, apellido, direccion, telefono, cedula, email);
-	// TODO Auto-generated constructor stub
-}
 
 
 
 
 
-	public Secretaria(Agenda agenda) {
-		
-		this.agenda = agenda;
-	}
-	
-	
 
-	public Agenda getAgenda() {
-		return agenda;
-	}
-
-	public void setAgenda(Agenda agenda) {
-		this.agenda = agenda;
-	}
-
-	@Override
-	public void validarCedula() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void validarCorreo() {
-		// TODO Auto-generated method stub
-		
-	}
-	
-	
-	
-	
 	
 }

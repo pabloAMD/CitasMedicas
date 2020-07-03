@@ -14,13 +14,7 @@ public class HistoriaClinica implements Serializable{
 	private String observaciones;
 	private List<CitaMedica> citamedicaList;
 	
-	
-	public HistoriaClinica(int id, String observaciones) {
-		super();
-		this.id = id;
-		this.observaciones = observaciones;
-	}
-	 
+
 	
 
 	public HistoriaClinica() {
@@ -49,21 +43,10 @@ public class HistoriaClinica implements Serializable{
 		this.observaciones = observaciones;
 	}
 
-
-	public List<CitaMedica> getCitamedicaList() {
-		return citamedicaList;
-	}
-
-
-	public void setCitamedicaList(List<CitaMedica> citamedicaList) {
-		this.citamedicaList = citamedicaList;
-	}
-	
-	
 	public static boolean guardarHistoriaClinica(int id, String observacion) {
 		HistoriaClinica hc = new HistoriaClinica();
-		hc.setId(id);
-		hc.setObservaciones(observacion);
+		hc.setId(hc.getId());
+		hc.setObservaciones(hc.getObservaciones());
 		System.out.println("Historia Clinica Creada");
 		return true;
 	}

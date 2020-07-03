@@ -15,16 +15,15 @@ public class LibroDiario implements Serializable {
 	private Factura factura;
 	
 	
-	
-	public LibroDiario() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-
 
 	public LibroDiario(Date fecha, Factura factura) {
 		this.fecha = fecha;
 		this.factura = factura;
+	}
+
+
+	public LibroDiario() {
+		// TODO Auto-generated constructor stub
 	}
 
 
@@ -38,17 +37,11 @@ public class LibroDiario implements Serializable {
 	}
 
 
-	public Factura getFactura() {
-		return factura;
-	}
-
-
-	public void setFactura(Factura factura) {
-		this.factura = factura;
-	}
 	
 	public static double calcularEgresos(Factura f) {
-		return f.getTotal();
+		double n= Factura.TotalFact(300, 12, 20);
+		System.out.println("total"+n);
+		return n;
 	}
 
 
@@ -60,6 +53,7 @@ public class LibroDiario implements Serializable {
 	public void setCodigo(int codigo) {
 		this.codigo = codigo;
 	}
+	
 	
 	
 	

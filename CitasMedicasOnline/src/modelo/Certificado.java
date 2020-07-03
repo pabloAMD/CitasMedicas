@@ -18,13 +18,6 @@ public class Certificado {
 		
 	}
 
-	public Certificado(int codigo, Date fecha, String motivo) {
-	
-		this.codigo = codigo;
-		this.fecha = fecha;
-		this.motivo = motivo;
-		this.estadoVlidacion = false;
-	}
 
 	public int getCodigo() {
 		return codigo;
@@ -50,19 +43,12 @@ public class Certificado {
 		this.motivo = motivo;
 	}
 
-	public boolean isEstadoVlidacion() {
-		return estadoVlidacion;
-	}
 
 	public void setEstadoVlidacion(boolean estadoVlidacion) {
 		this.estadoVlidacion = estadoVlidacion;
 	}
 
-	@Override
-	public String toString() {
-		return "Certificado [codigo=" + codigo + ", fecha=" + fecha + ", motivo=" + motivo + ", estadoVlidacion="
-				+ estadoVlidacion + "]";
-	}
+	
 	
 	
 	

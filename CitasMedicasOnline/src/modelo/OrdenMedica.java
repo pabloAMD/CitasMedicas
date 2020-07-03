@@ -15,14 +15,6 @@ public class OrdenMedica implements Serializable {
 	public OrdenMedica() {
 		
 	}
-
-
-	public OrdenMedica(int id, String receta) {
-	
-		this.id = id;
-		this.receta = receta;
-	}
-
  
 	public int getId() {
 		return id;
@@ -42,13 +34,6 @@ public class OrdenMedica implements Serializable {
 	public void setReceta(String receta) {
 		this.receta = receta;
 	}
-
-
-	@Override
-	public String toString() {
-		return "OrdenMedica [id=" + id + ", receta=" + receta + "]";
-	}
-	
 	
 	
 	

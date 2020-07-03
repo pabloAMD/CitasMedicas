@@ -14,16 +14,18 @@ public class SuscripcionTest {
 
 	@Test
 	public void agregarSaldo() {
-		assertTrue(Suscripcion.agregarSaldo(50.50)==181.00);
+		assertTrue(Suscripcion.agregarSaldo(50.50)==181.0);
 	}
 	
 	@Test
 	public void actualizarSaldo() {
-		assertTrue(Suscripcion.actualizarSaldo(50.50)==130.50);
+		assertTrue(Suscripcion.actualizarSaldo(50.50)==130.5);
 	}
 	
 	@Test
 	public void agregaLibroDiario() {
+		LibroDiario l= new LibroDiario();
+		l.setFecha(new Date());
 		Factura f= new Factura(); 
 		
 		f.setCodigo(1);
@@ -31,7 +33,7 @@ public class SuscripcionTest {
 		
 		
 		
-		assertTrue(Suscripcion.agregarLibroDiario(new Date(), f));
+		assertTrue(Suscripcion.agregarLibroDiario(l.getFecha(), f));
 	}
 
 }

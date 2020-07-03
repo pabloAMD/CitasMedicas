@@ -34,8 +34,6 @@ public abstract class Persona implements Serializable{
 		this.email = email;
 	}
 
-	public abstract void validarCedula();
-	public abstract void validarCorreo();
 
 	public String getNombre() {
 		return nombre;

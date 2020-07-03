@@ -30,7 +30,6 @@ public class Paciente extends Persona implements Serializable{
 	
 	
 
-	
 
 
 	public Paciente(int codigo, String nombre, String apellido, String direccion, String telefono, String cedula,
@@ -38,8 +37,6 @@ public class Paciente extends Persona implements Serializable{
 		super(codigo, nombre, apellido, direccion, telefono, cedula, email);
 		// TODO Auto-generated constructor stub
 	}
-
-
 
 
 
@@ -59,6 +56,9 @@ public class Paciente extends Persona implements Serializable{
 		// TODO Auto-generated method stub
 		
 	}
+=======
+	
+>>>>>>> branch 'master' of https://github.com/pabloAMD/CitasMedicas.git
 
 	public int getId_Paciente() {
 		return id_Paciente;
@@ -74,11 +74,9 @@ public class Paciente extends Persona implements Serializable{
 	}
 	
 	public static boolean actualizar(Paciente p) {
-		if (p.getId_Paciente()!=0) {
 			p.setDireccion("Juan Pablo ||");
 			return true;
-		}
-		return false;
+	
 	}
 	/**
 	 * @param nombre
