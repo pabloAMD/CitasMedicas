@@ -257,28 +257,7 @@ public class Gestion {
 		return true;
 	}
 	
-	public static boolean crearMedico(int codigo, Especialidad especialidad, String horarioAtencion,
-			Secretaria secretaria) {
-		
-		Especialidad es = new Especialidad();
-		Medico me = new Medico();
-		Secretaria se = new Secretaria();
-		me.setId_medico(codigo);
-		es.setId(especialidad.id);
-		es.setNombreEspecialidad(especialidad.nombreEspecialidad);
-		me.setHorarioAtencion(horarioAtencion);
-		
-		se.setNombre(secretaria.nombre);
-		se.setApellido(secretaria.apellido);
-		se.setDireccion(secretaria.direccion);
-		se.setTelefono(secretaria.telefono);
-		se.setCedula(secretaria.cedula);
-		se.setEmail(secretaria.email);
-		se.setAgenda(secretaria.agenda);
-		
-		System.out.println("medico creado");
-		return true;
-	} 
+	
 	
 	public static boolean crearPaciente(String nombre, String apellido, String direccion, String telefono, String cedula, 
 			String email,Suscripcion suscripcion) {

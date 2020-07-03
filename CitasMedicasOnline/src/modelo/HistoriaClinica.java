@@ -1,8 +1,15 @@
 package modelo;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class HistoriaClinica {
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class HistoriaClinica implements Serializable{
+	
+	@Id
 	private int id;
 	private String observaciones;
 	private List<CitaMedica> citamedicaList;

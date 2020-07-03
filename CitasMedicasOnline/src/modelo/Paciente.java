@@ -1,9 +1,27 @@
 package modelo;
 
-public class Paciente extends Persona {
+import java.io.Serializable;
+import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+
+@Entity
+public class Paciente extends Persona implements Serializable{
+	
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "paciente")
+	
+	private List<CitaMedica> citamedica;
 	
 	private int id_Paciente;
-	public Suscripcion suscripcion;
+	
+	@OneToOne
+	@JoinColumn
+	private Suscripcion suscripcion;
 	
 
 	public Paciente() {
@@ -12,11 +30,17 @@ public class Paciente extends Persona {
 	
 	
 
-	public Paciente(String nombre, String apellido, String direccion, String telefono, String cedula, String email,Suscripcion suscripcion) {
-		super(nombre, apellido, direccion, telefono, cedula, email);
+	
+
+
+	public Paciente(int codigo, String nombre, String apellido, String direccion, String telefono, String cedula,
+			String email) {
+		super(codigo, nombre, apellido, direccion, telefono, cedula, email);
 		// TODO Auto-generated constructor stub
-		suscripcion = suscripcion;
 	}
+
+
+
 
 
 
@@ -64,12 +88,7 @@ public class Paciente extends Persona {
 	 * @param cedula
 	 * @param email
 	 */
-	public Paciente(int id_Paciente,String nombre, String apellido, String direccion, String telefono, String cedula, String email,Suscripcion suscripcion) {
-		super(nombre, apellido, direccion, telefono, cedula, email);
-		// TODO Auto-generated constructor stub
-		this.id_Paciente = id_Paciente;
-		this.suscripcion = suscripcion;
-	}
+	
 
 	
 	

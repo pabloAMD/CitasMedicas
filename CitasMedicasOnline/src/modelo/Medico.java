@@ -1,14 +1,31 @@
 package modelo;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Medico extends Persona{
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
+
+@Entity
+public class Medico extends Persona implements Serializable{
 	
 	private int id_medico;
+	
 	private Especialidad especialidad;
+	
 	private String horarioAtencion;
+	
+	
 	private List<Certificado> certificados;
+	
+	
+	private CitaMedica citamedica;
+	
+	
 	private Secretaria secretaria;
 	
 	public Medico() {

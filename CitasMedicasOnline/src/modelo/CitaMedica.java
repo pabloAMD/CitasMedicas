@@ -1,11 +1,33 @@
 package modelo;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class CitaMedica {
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
+
+@Entity
+public class CitaMedica implements Serializable{
 	
+	@Id
 	private int id;
+	
+	@ManyToOne
+	@JoinColumn
 	private Paciente paciente;
+	
+	@OneToOne
+	@JoinColumn
+	private Factura factura;
+	
+	
+	private Medico medico;
+	
+	
 	private String motivo;
 	private int turno;
 	private Date fecha;
@@ -19,6 +41,16 @@ public class CitaMedica {
 	}
 	
 	
+	public Factura getFactura() {
+		return factura;
+	}
+
+
+	public void setFactura(Factura factura) {
+		this.factura = factura;
+	}
+
+
 	public int getId() {
 		return id;
 	}

@@ -1,12 +1,19 @@
 package modelo;
 
+import java.io.Serializable;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class Consulta {
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class Consulta implements Serializable {
 	
+	@Id
+	private int codigo;
 	private String hora;
 	private OrdenMedica ordenMedica;
 	private Medico medico;
@@ -21,9 +28,9 @@ public class Consulta {
 		
 	}
 	
-	public Consulta(String hora, OrdenMedica ordenMedica, Medico medico,CitaMedica paciente, Certificado certificado, String observaciones,
+	public Consulta(int codigo, String hora, OrdenMedica ordenMedica, Medico medico,CitaMedica paciente, Certificado certificado, String observaciones,
 			Date fechaConsulta) {
-		
+		this.codigo=codigo;
 		this.hora = hora;
 		this.ordenMedica = ordenMedica;
 		this.medico = medico;
@@ -32,6 +39,16 @@ public class Consulta {
 		this.observaciones = observaciones;
 		this.fechaConsulta = fechaConsulta;
 	}
+	
+	
+	public int getCodigo() {
+		return codigo;
+	}
+
+	public void setCodigo(int codigo) {
+		this.codigo = codigo;
+	}
+
 	public String getHora() {
 		return hora;
 	}

@@ -1,13 +1,21 @@
 package modelo;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class LibroDiarioEmpresa {
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class LibroDiarioEmpresa implements Serializable{
 	
+	@Id
+	private int codigo;
 	private Date fecha;
 	private double saldo;
+	
 	private List<PagoSuscripcion> pagSubscripcionesList;
 	
 	public LibroDiarioEmpresa() {
@@ -64,6 +72,15 @@ public class LibroDiarioEmpresa {
 		return saldo-pagos;
 	}
 	
+	
+	public int getCodigo() {
+		return codigo;
+	}
+
+	public void setCodigo(int codigo) {
+		this.codigo = codigo;
+	}
+
 	public static boolean guardarSuscripcionPagos(int id, Factura facturas) {
 		PagoSuscripcion ps=new PagoSuscripcion();
 		Paciente p=new Paciente();

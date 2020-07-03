@@ -1,10 +1,14 @@
 package modelo;
 
+import java.io.Serializable;
 
-public class Secretaria extends Persona{
+import javax.persistence.Entity;
+
+@Entity
+public class Secretaria extends Persona implements Serializable{
 
 
-	public Agenda agenda;
+	private Agenda agenda;
 	
 public Secretaria() {
 		
@@ -12,12 +16,18 @@ public Secretaria() {
 	}
 
 
-	public Secretaria(String nombre, String apellido, String direccion, String telefono, String cedula, String email,Agenda agenda) {
-	super(nombre, apellido, direccion, telefono, cedula, email);
-	this.agenda=agenda;
+	
+ 
+
+	public Secretaria(int codigo, String nombre, String apellido, String direccion, String telefono, String cedula,
+		String email) {
+	super(codigo, nombre, apellido, direccion, telefono, cedula, email);
 	// TODO Auto-generated constructor stub
 }
- 
+
+
+
+
 
 	public Secretaria(Agenda agenda) {
 		

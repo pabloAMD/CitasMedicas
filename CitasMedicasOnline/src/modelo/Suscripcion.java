@@ -1,13 +1,25 @@
 package modelo;
 
+import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class Suscripcion {
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+
+@Entity
+public class Suscripcion implements Serializable{
+	
+	@Id
 	private int id;
 	private double saldo;
+	
+	@OneToOne(cascade = CascadeType.ALL, mappedBy = "suscripcion")
+	private Paciente paciente;
 	private List<LibroDiario> libroDiarioList;
 	
 	

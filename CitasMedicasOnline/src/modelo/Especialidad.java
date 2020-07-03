@@ -1,9 +1,16 @@
 package modelo;
 
-public class Especialidad {
+import java.io.Serializable;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class Especialidad  implements Serializable{
 	
-	public int id;
-	public String nombreEspecialidad;
+	@Id
+	private int id;
+	private  String nombreEspecialidad;
 	
 	public Especialidad() {
 		 

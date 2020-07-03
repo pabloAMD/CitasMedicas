@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.2" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
+	<persistence-unit name="Citasmedicas"   transaction-type="RESOURCE_LOCAL">
+		<class>modelo.Administrador</class>
+		<class>modelo.Agenda</class>
+		<class>modelo.Certificado</class>
+		<class>modelo.CitaMedica</class>
+		<class>modelo.Consulta</class>
+		<class>modelo.Especialidad</class>
+		<class>modelo.Factura</class>
+		<class>modelo.HistoriaClinica</class>
+		<class>modelo.LibroDiario</class>
+		<class>modelo.LibroDiarioEmpresa</class>
+		<class>modelo.Medico</class>
+		<class>modelo.OrdenMedica</class>
+		<class>modelo.Paciente</class>
+		<class>modelo.PagoSuscripcion</class>
+		<class>modelo.Persona</class>
+		<class>modelo.Secretaria</class>
+		<class>modelo.Sueldo</class>
+		<class>modelo.Suscripcion</class>
+		
+		<properties>
+			<property name="eclipselink.ddl-generation" value="create-tables"></property>
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/final?serverTimezone=UTC"/>
+			<property name="javax.persistence.jdbc.user" value="root"/>
+			<property name="javax.persistence.jdbc.password" value="cuenca"/>
+		</properties>
+	</persistence-unit>
+</persistence>

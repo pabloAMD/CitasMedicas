@@ -1,8 +1,13 @@
 package modelo;
 
-public class OrdenMedica {
+import java.io.Serializable;
 
-	
+import javax.persistence.Entity;
+import javax.persistence.Id;
+@Entity
+public class OrdenMedica implements Serializable {
+
+	@Id
 	private int id;
 	private String receta;
 	

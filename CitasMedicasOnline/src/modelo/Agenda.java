@@ -1,10 +1,15 @@
 package modelo;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Agenda {
-	
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class Agenda implements Serializable{
+	@Id
 	private int id;
 	private List<Consulta> consultalist;
 	

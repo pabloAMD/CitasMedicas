@@ -1,9 +1,16 @@
 package modelo;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class LibroDiario {
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class LibroDiario implements Serializable {
 	
+	@Id
+	private int codigo;
 	private Date fecha;
 	private Factura factura;
 	
@@ -43,6 +50,18 @@ public class LibroDiario {
 	public static double calcularEgresos(Factura f) {
 		return f.getTotal();
 	}
+
+
+	public int getCodigo() {
+		return codigo;
+	}
+
+
+	public void setCodigo(int codigo) {
+		this.codigo = codigo;
+	}
+	
+	
 	
 	
 	

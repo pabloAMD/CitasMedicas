@@ -1,9 +1,22 @@
 package modelo;
 
-public class Factura {
+import java.io.Serializable;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+
+@Entity
+public class Factura implements Serializable {
 	
+	@Id
 	private int codigo;
+	
+	@OneToOne(cascade = CascadeType.ALL, mappedBy = "factura")
 	private CitaMedica citaMedica;
+	
 	private double total;
 	
 

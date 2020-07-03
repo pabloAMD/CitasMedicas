@@ -1,20 +1,31 @@
 package modelo;
 
-public abstract class Persona{
+import java.io.Serializable;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+@Entity
+public abstract class Persona implements Serializable{
 	
-	public String nombre;
-	public String apellido;
-	public String direccion;
-	public String telefono;
-	public String cedula;
-	public String email;
+	@Id
+	private int codigo;
+	
+	private String nombre;
+	private String apellido;
+	private String direccion;
+	private String telefono;
+	private String cedula;
+	private String email;
 	
 	
 	public Persona() {
 		super();
 	}
-	public Persona(String nombre, String apellido, String direccion, String telefono, String cedula, String email) {
-		super();
+
+	public Persona(int codigo, String nombre, String apellido, String direccion, String telefono, String cedula,
+			String email) {
+		
+		this.codigo = codigo;
 		this.nombre = nombre;
 		this.apellido = apellido;
 		this.direccion = direccion;
@@ -22,6 +33,7 @@ public abstract class Persona{
 		this.cedula = cedula;
 		this.email = email;
 	}
+
 	public abstract void validarCedula();
 	public abstract void validarCorreo();
 
@@ -60,6 +72,14 @@ public abstract class Persona{
 	}
 	public void setEmail(String email) {
 		this.email = email;
+	}
+
+	public int getCodigo() {
+		return codigo;
+	}
+
+	public void setCodigo(int codigo) {
+		this.codigo = codigo;
 	}
 	
 	

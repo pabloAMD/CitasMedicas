@@ -2,8 +2,13 @@ package modelo;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Certificado {
 	
+	@Id
 	private int codigo;
 	private Date fecha;
 	private String motivo;

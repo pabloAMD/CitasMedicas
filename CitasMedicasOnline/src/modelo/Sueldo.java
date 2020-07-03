@@ -1,8 +1,16 @@
 package modelo;
 
-public class Sueldo {
+import java.io.Serializable;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class Sueldo implements Serializable{
 	
 	
+	@Id
+	private int codigo;
 	private double valor;
 	private double comisiones;
 	private double multas;
@@ -11,12 +19,19 @@ public class Sueldo {
 		
 	}
 	
-	public Sueldo(double valor, double comisiones, double multas) {
+	
+
+
+
+	public Sueldo(int codigo, double valor, double comisiones, double multas) {
 		
+		this.codigo = codigo;
 		this.valor = valor;
 		this.comisiones = comisiones;
 		this.multas = multas;
 	}
+
+
 
 
 
