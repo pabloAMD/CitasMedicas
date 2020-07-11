@@ -49,8 +49,6 @@ public class Consulta implements Serializable {
 	public void setCodigo(int codigo) {
 		this.codigo = codigo;
 	}
-=======
->>>>>>> branch 'master' of https://github.com/pabloAMD/CitasMedicas.git
 
 	public String getHora() {
 		return hora;

@@ -32,17 +32,7 @@ public class Administrador  extends Persona implements Serializable{
 		this.id = id;
 	}
 
-	@Override
-	public void validarCedula() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void validarCorreo() {
-		// TODO Auto-generated method stub
-		
-	}
+	
 	
 	
 	

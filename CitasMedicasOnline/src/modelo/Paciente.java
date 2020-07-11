@@ -41,24 +41,7 @@ public class Paciente extends Persona implements Serializable{
 
 
 
-	@Override
-	public void validarCedula() {
-		
-		if (this.getCedula().length()<10) {
-			System.out.println("cedula Correcta");
-		}else {
-			System.out.println("cedula Incorrecta");
-		}
-			
-	}
-	@Override
-	public void validarCorreo() {
-		// TODO Auto-generated method stub
-		
-	}
-=======
 	
->>>>>>> branch 'master' of https://github.com/pabloAMD/CitasMedicas.git
 
 	public int getId_Paciente() {
 		return id_Paciente;
@@ -78,16 +61,7 @@ public class Paciente extends Persona implements Serializable{
 			return true;
 	
 	}
-	/**
-	 * @param nombre
-	 * @param apellido
-	 * @param direccion
-	 * @param telefono
-	 * @param cedula
-	 * @param email
-	 */
 	
-
 	
 	
 }

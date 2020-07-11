@@ -18,9 +18,7 @@ public class Sueldo implements Serializable{
 	public Sueldo() {
 		
 	}
-	
-<<<<<<< HEAD
-	
+
 
 
 
@@ -35,9 +33,6 @@ public class Sueldo implements Serializable{
 
 
 
-
-=======
->>>>>>> branch 'master' of https://github.com/pabloAMD/CitasMedicas.git
 	public double getValor() {
 		return valor;
 	}
