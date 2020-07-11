@@ -89,14 +89,7 @@ public class CitaMedica implements Serializable{
 	}
 
 
-	/**
-	 * @param id
-	 * @param paciente
-	 * @param motivo
-	 * @param turno
-	 * @param fecha
-	 * @param precio
-	 */
+
 	public CitaMedica(int id, Paciente paciente, String motivo, int turno, Date fecha, double precio) {
 		super();
 		this.id = id;
