@@ -5,23 +5,35 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 @Entity
 public class LibroDiarioEmpresa implements Serializable{
 	
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int codigo;
 	private Date fecha;
 	private double saldo;
 	
+	@OneToOne
+	@JoinColumn
+	private Administrador libroDiarioEmpresa;
+	
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "pagos")
 	private List<PagoSuscripcion> pagSubscripcionesList;
-	
 
+	public LibroDiarioEmpresa() {
+		
+	}
 
-	
-	
 	public int getCodigo() {
 		return codigo;
 	}
@@ -30,43 +42,61 @@ public class LibroDiarioEmpresa implements Serializable{
 		this.codigo = codigo;
 	}
 
-	public static boolean guardarSuscripcionPagos(int id, Factura facturas) {
-		PagoSuscripcion ps=new PagoSuscripcion();
-		Paciente p=new Paciente();
-		CitaMedica cm=new CitaMedica();
-		Factura f=new Factura();
-		Suscripcion s=new Suscripcion();
-		
-		s.setId(s.getId());
-		s.setSaldo(s.getSaldo());
-		
-		ps.setId(id);
-		f.setCodigo(f.getCodigo());
-		f.setCitaMedica(cm);
-		f.setTotal(f.getTotal());
-		
-		p.setId_Paciente(p.getId_Paciente());
-		p.setNombre(p.getNombre());
-		p.setApellido(p.getApellido());
-		p.setDireccion(p.getDireccion());
-		p.setTelefono(p.getTelefono());
-		p.setCedula(p.getCedula());
-		p.setEmail(p.getEmail());
-		p.setSuscripcion(p.getSuscripcion());
-		
-		cm.setId(cm.getId());
-		cm.setPaciente(cm.getPaciente());
-		cm.setMotivo(cm.getMotivo());
-		cm.setTurno(cm.getTurno());
-		cm.setFecha(cm.getFecha());
-		cm.setPrecio(cm.getPrecio());
-		
-	
-		System.out.println("Pago Suscripcion Creado");
-		
+	public Date getFecha() {
+		return fecha;
+	}
+
+	public void setFecha(Date fecha) {
+		this.fecha = fecha;
+	}
+
+	public double getSaldo() {
+		return saldo;
+	}
+
+	public void setSaldo(double saldo) {
+		this.saldo = saldo;
+	}
+
+	public Administrador getLibroDiarioEmpresa() {
+		return libroDiarioEmpresa;
+	}
+
+	public void setLibroDiarioEmpresa(Administrador libroDiarioEmpresa) {
+		this.libroDiarioEmpresa = libroDiarioEmpresa;
+	}
+
+	public List<PagoSuscripcion> getPagSubscripcionesList() {
+		return pagSubscripcionesList;
+	}
+
+	public void setPagSubscripcionesList(List<PagoSuscripcion> pagSubscripcionesList) {
+		this.pagSubscripcionesList = pagSubscripcionesList;
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + codigo;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		LibroDiarioEmpresa other = (LibroDiarioEmpresa) obj;
+		if (codigo != other.codigo)
+			return false;
 		return true;
 	}
 	
-	
 
+
+	
 }

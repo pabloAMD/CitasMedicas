@@ -8,33 +8,35 @@ import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
 @Entity
 public class Suscripcion implements Serializable{
 	
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private double saldo;
 	
-	@OneToOne(cascade = CascadeType.ALL, mappedBy = "suscripcion")
-	private Paciente paciente;
+	@OneToOne
+	@JoinColumn
+	private Paciente pacient;
+	
+	
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "suscripcion")
 	private List<LibroDiario> libroDiarioList;
 	
 	
 	
 	public Suscripcion() {
-		super();
-		// TODO Auto-generated constructor stub
+		
 	}
 
-
-	public Suscripcion(int id, double saldo) {
-		this.id = id;
-		this.saldo = saldo;
-		this.libroDiarioList = new ArrayList<LibroDiario>();
-	}
 
 
 	public int getId() {
@@ -42,9 +44,11 @@ public class Suscripcion implements Serializable{
 	}
 
 
+
 	public void setId(int id) {
 		this.id = id;
 	}
+
 
 
 	public double getSaldo() {
@@ -52,32 +56,63 @@ public class Suscripcion implements Serializable{
 	}
 
 
+
 	public void setSaldo(double saldo) {
 		this.saldo = saldo;
 	}
 
-	public static double agregarSaldo(double valor) {
-		double saldoActual=130.50;
-		System.out.println(saldoActual+valor);
-		return saldoActual+valor;			
+
+
+	public Paciente getPacient() {
+		return pacient;
 	}
-	
-	public static double actualizarSaldo(double gasto){
-		double saldoActual=181.00;
-		return saldoActual-gasto;	
+
+
+
+	public void setPacient(Paciente pacient) {
+		this.pacient = pacient;
 	}
-	
-	public static boolean agregarLibroDiario(Date fecha, Factura factura) {
-		SimpleDateFormat objSDF = new SimpleDateFormat("dd-MM-yyyy");
-		System.out.println(objSDF.format(fecha));
-		List<LibroDiario> libroDiarioL = new ArrayList<LibroDiario>();
-		LibroDiario lDiario= new LibroDiario(fecha, factura);
-		libroDiarioL.add(lDiario);
+
+
+
+	public List<LibroDiario> getLibroDiarioList() {
+		return libroDiarioList;
+	}
+
+
+
+	public void setLibroDiarioList(List<LibroDiario> libroDiarioList) {
+		this.libroDiarioList = libroDiarioList;
+	}
+
+
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + id;
+		return result;
+	}
+
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Suscripcion other = (Suscripcion) obj;
+		if (id != other.id)
+			return false;
 		return true;
 	}
+
 	
-	
-	
+
 	
 	
 }

@@ -15,9 +15,7 @@
 		<class>modelo.OrdenMedica</class>
 		<class>modelo.Paciente</class>
 		<class>modelo.PagoSuscripcion</class>
-		<class>modelo.Persona</class>
 		<class>modelo.Secretaria</class>
-		<class>modelo.Sueldo</class>
 		<class>modelo.Suscripcion</class>
 		
 		<properties>

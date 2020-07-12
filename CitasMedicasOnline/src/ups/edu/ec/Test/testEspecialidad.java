@@ -11,11 +11,11 @@ public class testEspecialidad {
 		// TODO Auto-generated method stub
 		EntityManager em = Persistence.createEntityManagerFactory("Citasmedicas").createEntityManager();
 		
-		Especialidad esp = new Especialidad(1,"Odontologo");
+		Especialidad esp = new Especialidad("Odontologo");
 		
 		em.getTransaction().begin();
 		em.persist(esp);
-		em.persist(new Especialidad(7,"Pediatra"));
+		em.persist(new Especialidad("Pediatra"));
 		em.getTransaction().commit();
 	}
 

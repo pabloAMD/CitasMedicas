@@ -16,7 +16,7 @@ import modelo.LibroDiarioEmpresa;
 import modelo.Medico;
 import modelo.Paciente;
 import modelo.Secretaria;
-import modelo.Sueldo;
+	
 import modelo.Suscripcion;
 import modelo.Especialidad;
 
@@ -26,7 +26,7 @@ public class Gestion {
 	private List<Paciente> pacienetslist;
 	private List<Medico> medicosList;
 	private LibroDiarioEmpresa libroDiarioEmpresa;
-	private Sueldo asignarSueldo;
+	
 	
 	
 	public Gestion() {
