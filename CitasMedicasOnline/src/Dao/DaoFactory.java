@@ -9,6 +9,8 @@ public abstract class DaoFactory {
 		return factory;
 	}
 	
-	
+	public abstract AgendaDao getAgendaDao();
+
+	public abstract PacienteDao getPacienteDao();
 	
 }

@@ -21,8 +21,7 @@ public class Agenda implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	private List<Consulta> consultalist;
-	
+
 	@OneToOne
 	@JoinColumn
 	private Secretaria agenda;
@@ -33,8 +32,7 @@ public class Agenda implements Serializable{
 	
 
 	public Agenda() {
-		consultalist = new ArrayList<Consulta>();
-
+		
 	}
 
 	
@@ -48,15 +46,7 @@ public class Agenda implements Serializable{
 	}
 
 
-	public List<Consulta> getConsultalist() {
-		return consultalist;
-	}
-
-
-	public void setConsultalist(List<Consulta> consultalist) {
-		this.consultalist = consultalist;
-	}
-
+	
 
 	public Secretaria getAgenda() {
 		return agenda;
@@ -119,11 +109,7 @@ public class Agenda implements Serializable{
 	}
 
 
-	@Override
-	public String toString() {
-		return "Agenda [id=" + id + ", consultalist=" + consultalist + ", agenda=" + agenda + ", consultas=" + consultas
-				+ "]";
-	}
+	
 	
 	
 

@@ -25,6 +25,7 @@ public class JPAGenericDao<T,ID> implements GenericDao<T, ID> {
 	
 
 	public void create(T entity) {
+		System.out.println("si llego al metodo");
 		em.getTransaction().begin();
 		try {
 			em.persist(entity);

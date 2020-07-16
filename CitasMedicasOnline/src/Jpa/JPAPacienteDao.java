@@ -9,7 +9,7 @@ import modelo.Paciente;
 
 
 
-public  class JPAPacienteDao extends JPAGenericDao<Paciente, Integer>  implements PacienteDao {
+public  class JPAPacienteDao extends JPAGenericDao<Paciente, String>  implements PacienteDao {
 	
 	public JPAPacienteDao() {
 		super(Paciente.class);
