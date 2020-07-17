@@ -17,4 +17,6 @@ public abstract class DaoFactory {
 
 	public abstract MedicoDao getMedicoDao();
 	
+	public abstract SuscripcionDao getSuscripcionDao();
+	
 }

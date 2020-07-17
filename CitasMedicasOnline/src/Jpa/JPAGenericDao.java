@@ -10,6 +10,7 @@ import javax.persistence.TypedQuery;
 import org.eclipse.persistence.internal.jpa.rs.metadata.model.Query;
 
 import Dao.GenericDao;
+import modelo.Paciente;
 
 
 
@@ -91,7 +92,19 @@ public class JPAGenericDao<T,ID> implements GenericDao<T, ID> {
 		return lista;
 	    }
 
-
+	 @SuppressWarnings("unchecked")
+	 public List<Paciente>  findbyPaciente(String cedula) {	
+	 	String sql = ("SELECT p FROM Paciente p where p.pacient.cedula='"+cedula+"'");
+	 	List<Paciente> list = em.createQuery(sql).getResultList();
+	 	System.out.println("sdfsdfsd" + list);
+	 	 for (Paciente p : list) {
+	 	    System.out.println("Nombre Paciente:"+p.getNombre());
+	 	  }
+	 	
+	 return list;	
+	 	
+	 	
+	 }
 	public List<T> find(String[] attributes, String[] values) {
 		// TODO Auto-generated method stub
 		return null;
