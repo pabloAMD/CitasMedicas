@@ -30,13 +30,31 @@ public class Secretaria  implements Serializable{
 	private Medico mSecretaria;
 	
 
-	@OneToOne(cascade = CascadeType.ALL, mappedBy = "agenda")
+	@OneToOne(cascade = CascadeType.ALL, mappedBy = "secretaria")
 	private Agenda agenda;
+	
 	private double sueldo;
 	
 	public Secretaria() {
 		
 	}
+	
+	
+
+	public Secretaria(int id, String nombre, String apellido, String direccion, String telefono, String cedula,
+			String email, double sueldo) {
+		
+		this.id = id;
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.direccion = direccion;
+		this.telefono = telefono;
+		this.cedula = cedula;
+		this.email = email;
+		this.sueldo = sueldo;
+	}
+
+
 
 	public int getId() {
 		return id;
@@ -122,7 +140,7 @@ public class Secretaria  implements Serializable{
 	@Override
 	public int hashCode() {
 		final int prime = 31;
-		int result = super.hashCode();
+		int result = 1;
 		result = prime * result + id;
 		return result;
 	}
@@ -131,7 +149,7 @@ public class Secretaria  implements Serializable{
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
-		if (!super.equals(obj))
+		if (obj == null)
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
@@ -140,6 +158,15 @@ public class Secretaria  implements Serializable{
 			return false;
 		return true;
 	}
+
+	@Override
+	public String toString() {
+		return "Secretaria [id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", direccion=" + direccion
+				+ ", telefono=" + telefono + ", cedula=" + cedula + ", email=" + email + ", mSecretaria=" + mSecretaria
+				+ ", agenda=" + agenda + ", sueldo=" + sueldo + "]";
+	}
+
+	
 	
 	
 

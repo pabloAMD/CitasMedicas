@@ -1,4 +1,4 @@
-package Servlets;
+			package Servlets;
 
 import java.io.IOException;
 
@@ -10,8 +10,9 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import Dao.DaoFactory;
-import Dao.PacienteDao;
-import modelo.Paciente;
+import Dao.MedicoDao;
+import modelo.Medico;
+
 
 
 
@@ -19,17 +20,17 @@ import modelo.Paciente;
 /**
  * Servlet implementation class InsertarUsuarioServlet
  */
-@WebServlet(name ="/InsertarPacienteServlet", urlPatterns = {"/insertar-paciente"})
-public class InsertarPacienteServlet extends HttpServlet {
+@WebServlet(name ="/InsertarMedicoServlet", urlPatterns = {"/insertar-medico"})
+public class InsertarMedicoServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	PacienteDao dao = DaoFactory.getFactory().getPacienteDao();
-	Paciente paciente = new Paciente();
+	MedicoDao dao = DaoFactory.getFactory().getMedicoDao();
+	Medico medico = new Medico();
 	
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public InsertarPacienteServlet() {
+    public InsertarMedicoServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -55,24 +56,28 @@ public class InsertarPacienteServlet extends HttpServlet {
 		String telefono=request.getParameter("telefono");
 		String cedula=request.getParameter("cedula");
 		String email=request.getParameter("email");
+		String HorarioAtencion=request.getParameter("horarioAtencion");
+		String sal=  request.getParameter("sueldo");
+		double saldo = Double.parseDouble(sal);
 		
 		System.out.println("Mostrando datos");
 		
-		PacienteDao dao = DaoFactory.getFactory().getPacienteDao();
-		Paciente paciente = new Paciente();
+		MedicoDao dao = DaoFactory.getFactory().getMedicoDao();
+		Medico medico = new Medico();
 		
-		paciente.setNombre(nombre);
-		paciente.setApellido(apellido);
-		paciente.setDireccion(direccion);
-		paciente.setTelefono(telefono);
-		paciente.setCedula(cedula);
-		paciente.setEmail(email);
-			
+		medico.setNombre(nombre);
+		medico.setApellido(apellido);
+		medico.setDireccion(direccion);
+		medico.setTelefono(telefono);
+		medico.setCedula(cedula);
+		medico.setEmail(email);
+		medico.setHorarioAtencion(HorarioAtencion);
+		medico.setSueldo(saldo);
 		System.out.println("Valores");
-		System.out.println(paciente.toString());
-		dao.create(paciente);
+		System.out.println(medico.toString());
+		dao.create(medico);
 		System.out.println();
-		response.sendRedirect("/insertaPaciente.jsp");
+		response.sendRedirect("/crearMedico.jsp");
 		}
 
 }

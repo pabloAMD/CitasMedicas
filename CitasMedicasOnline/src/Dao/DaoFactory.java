@@ -12,5 +12,9 @@ public abstract class DaoFactory {
 	public abstract AgendaDao getAgendaDao();
 
 	public abstract PacienteDao getPacienteDao();
+
+	public abstract SecretariaDao getSecretariaDao();
+
+	public abstract MedicoDao getMedicoDao();
 	
 }

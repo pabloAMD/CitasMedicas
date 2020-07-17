@@ -5,7 +5,7 @@ import java.util.List;
 import Dao.AgendaDao;
 import modelo.Agenda;
 
-public class JPAOrdenMedicaDao extends JPAGenericDao<Agenda, Integer>  implements AgendaDao {
+public class JPAOrdenMedicaDao extends JPAGenericDao<Agenda, String>  implements AgendaDao {
 	
 	public JPAOrdenMedicaDao() {
 		super(Agenda.class);
@@ -15,5 +15,8 @@ public class JPAOrdenMedicaDao extends JPAGenericDao<Agenda, Integer>  implement
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	
+
 
 }

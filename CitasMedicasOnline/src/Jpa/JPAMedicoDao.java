@@ -2,22 +2,27 @@ package Jpa;
 
 import java.util.List;
 
-import Dao.OrdenMedicaDao;
+import Dao.MedicoDao;
+import modelo.Medico;
 import modelo.OrdenMedica;
 
 
 
 
 
-public class JPAMedicoDao extends JPAGenericDao<OrdenMedica, Integer>  implements OrdenMedicaDao {
+public class JPAMedicoDao extends JPAGenericDao<Medico, String>  implements MedicoDao {
 	
 	public JPAMedicoDao() {
-		super(OrdenMedica.class);
+		super(Medico.class);
 	}
 
-	public List<OrdenMedica> findbyUserId(String dato) {
+	
+
+	public List<Medico> findbyUserId(String dato) {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	
 
 }

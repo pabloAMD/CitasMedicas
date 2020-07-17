@@ -6,7 +6,7 @@ import modelo.Agenda;
 
 
 
-public interface AgendaDao extends GenericDao<Agenda, Integer>{
+public interface AgendaDao extends GenericDao<Agenda, String>{
 
 	List<Agenda> findbyUserId(String dato);
 

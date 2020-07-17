@@ -8,7 +8,7 @@ import modelo.Secretaria;
 
 
 
-public class JPASecretariaDao extends JPAGenericDao<Secretaria, Integer>  implements SecretariaDao {
+public class JPASecretariaDao extends JPAGenericDao<Secretaria, String>  implements SecretariaDao {
 	
 	public JPASecretariaDao() {
 		super(Secretaria.class);
