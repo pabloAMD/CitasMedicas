@@ -13,4 +13,6 @@ public abstract class DaoFactory {
 
 	public abstract PacienteDao getPacienteDao();
 	
+	public abstract SuscripcionDao getSuscripcionDao();
+	
 }

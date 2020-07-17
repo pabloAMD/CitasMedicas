@@ -3,6 +3,7 @@ package Jpa;
 import Dao.AgendaDao;
 import Dao.DaoFactory;
 import Dao.PacienteDao;
+import Dao.SuscripcionDao;
 
 public class JPADaoFactory extends DaoFactory {
 
@@ -16,6 +17,12 @@ public class JPADaoFactory extends DaoFactory {
 	public PacienteDao getPacienteDao() {
 		// TODO Auto-generated method stub
 		return new JPAPacienteDao();
+	}
+
+	@Override
+	public SuscripcionDao getSuscripcionDao() {
+		// TODO Auto-generated method stub
+		return new JPASuscripcionDao();
 	}
 
 	

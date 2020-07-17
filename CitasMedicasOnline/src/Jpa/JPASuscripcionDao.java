@@ -7,7 +7,7 @@ import modelo.Suscripcion;
 
 
 
-public class JPASuscripcionDao extends JPAGenericDao<Suscripcion, Integer>  implements SuscripcionDao {
+public class JPASuscripcionDao extends JPAGenericDao<Suscripcion, String>  implements SuscripcionDao {
 	
 	public JPASuscripcionDao() {
 		super(Suscripcion.class);
