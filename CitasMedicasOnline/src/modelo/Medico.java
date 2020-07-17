@@ -27,7 +27,8 @@ public class Medico  implements Serializable{
 	private String telefono;
 	private String cedula;
 	private String email;
-	
+	private String horarioAtencion;
+	private double sueldo;
 	
 	
 	@OneToOne(cascade = CascadeType.ALL, mappedBy = "medico")
@@ -46,10 +47,7 @@ public class Medico  implements Serializable{
 	private List<Consulta> cMedico;
 	
 	
-	private String horarioAtencion;
 	
-	
-	private double sueldo;
 	
 	
 	
@@ -57,6 +55,23 @@ public class Medico  implements Serializable{
 	public Medico() {
 		
 		
+	}
+
+
+
+
+	public Medico(int id_medico, String nombre, String apellido, String direccion, String telefono, String cedula,
+			String email, String horarioAtencion, double sueldo) {
+		
+		this.id_medico = id_medico;
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.direccion = direccion;
+		this.telefono = telefono;
+		this.cedula = cedula;
+		this.email = email;
+		this.horarioAtencion = horarioAtencion;
+		this.sueldo = sueldo;
 	}
 
 

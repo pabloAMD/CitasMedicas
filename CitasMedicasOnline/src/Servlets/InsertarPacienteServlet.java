@@ -67,7 +67,7 @@ public class InsertarPacienteServlet extends HttpServlet {
 		paciente.setTelefono(telefono);
 		paciente.setCedula(cedula);
 		paciente.setEmail(email);
-		
+			
 		System.out.println("Valores");
 		System.out.println(paciente.toString());
 		dao.create(paciente);

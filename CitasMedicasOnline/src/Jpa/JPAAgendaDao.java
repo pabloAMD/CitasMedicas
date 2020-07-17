@@ -5,7 +5,7 @@ import java.util.List;
 import Dao.AgendaDao;
 import modelo.Agenda;
 
-public class JPAAgendaDao extends JPAGenericDao<Agenda, Integer>  implements AgendaDao {
+public class JPAAgendaDao extends JPAGenericDao<Agenda, String>  implements AgendaDao {
 	
 	public JPAAgendaDao() {
 		super(Agenda.class);

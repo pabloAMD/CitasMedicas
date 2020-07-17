@@ -2,6 +2,7 @@ package modelo;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -21,10 +22,13 @@ public class Agenda implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
+	
+	private String notas;
+	private String fecha;
 
 	@OneToOne
 	@JoinColumn
-	private Secretaria agenda;
+	private Secretaria secretaria;
 	
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "agendaConsulta")
 	private List<Consulta> consultas;
@@ -36,6 +40,13 @@ public class Agenda implements Serializable{
 	}
 
 	
+	public Agenda(String notas, String fecha) {
+		
+		this.notas = notas;
+		this.fecha = fecha;
+	}
+
+
 	public int getId() {
 		return id;
 	}
@@ -48,13 +59,38 @@ public class Agenda implements Serializable{
 
 	
 
-	public Secretaria getAgenda() {
-		return agenda;
+	public String getNotas() {
+		return notas;
 	}
 
 
-	public void setAgenda(Secretaria agenda) {
-		this.agenda = agenda;
+	public void setNotas(String notas) {
+		this.notas = notas;
+	}
+
+
+	
+
+	public String getFecha() {
+		return fecha;
+	}
+
+
+	public void setFecha(String fecha) {
+		this.fecha = fecha;
+	}
+
+
+	
+
+
+	public Secretaria getSecretaria() {
+		return secretaria;
+	}
+
+
+	public void setSecretaria(Secretaria secretaria) {
+		this.secretaria = secretaria;
 	}
 
 
@@ -68,21 +104,10 @@ public class Agenda implements Serializable{
 	}
 
 
-	public static boolean guardarConsulta(Consulta consulta) {
-		List<Consulta> consultalist = new ArrayList<Consulta>();
-		consultalist.add(consulta);
-		System.out.println(consultalist.size());
-		return true;
+	
 
-	}
 
-	public static boolean actualizarConsulta(Consulta consulta) {
-		List<Consulta> consultalist = new ArrayList<Consulta>();
-		consultalist.add(consulta);
-		consulta.setObservaciones("cancer terminal");
-		consultalist.add(consultalist.indexOf(consulta), consulta);
-		return true;
-	}
+
 
 
 	@Override
@@ -106,6 +131,13 @@ public class Agenda implements Serializable{
 		if (id != other.id)
 			return false;
 		return true;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Agenda [id=" + id + ", notas=" + notas + ", fecha=" + fecha + ", agenda=" + secretaria + ", consultas="
+				+ consultas + "]";
 	}
 
 
