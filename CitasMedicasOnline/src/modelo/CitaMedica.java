@@ -42,7 +42,7 @@ public class CitaMedica implements Serializable{
 	
 	private String motivo;
 	private int turno;
-	private Date fecha;
+	private String fecha;
 	private double precio;
 	
 	public CitaMedica() {
@@ -113,11 +113,11 @@ public class CitaMedica implements Serializable{
 		this.turno = turno;
 	}
 
-	public Date getFecha() {
+	public String getFecha() {
 		return fecha;
 	}
 
-	public void setFecha(Date fecha) {
+	public void setFecha(String fecha) {
 		this.fecha = fecha;
 	}
 
@@ -150,7 +150,7 @@ public class CitaMedica implements Serializable{
 			return false;
 		return true;
 	}
-	
+
 	
 	
 	
