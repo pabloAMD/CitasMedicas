@@ -20,6 +20,15 @@ public  class JPAPacienteDao extends JPAGenericDao<Paciente, String>  implements
 		return null;
 	}
 
+	public Paciente buscarPorId(String id) {
+		Paciente paciente = null;   
+        String jpql = "SELECT u FROM Paciente u WHERE u.id_Paciente = " + id ;
+        paciente =  (Paciente) em.createQuery(jpql).getSingleResult();
+        em.createQuery(jpql).getSingleResult();
+    return paciente;
+
+	}
+
 	
 
 	

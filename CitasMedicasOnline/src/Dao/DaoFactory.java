@@ -19,4 +19,7 @@ public abstract class DaoFactory {
 	
 	public abstract SuscripcionDao getSuscripcionDao();
 	
+	public abstract CitaMedicaDao getCitaMedicaDao();
+	
+	public abstract FacturaDao getFacturaDao();
 }

@@ -69,7 +69,7 @@ public class InsertarPacienteServlet extends HttpServlet {
 		paciente.setEmail(email);
 			
 		System.out.println("Valores");
-		System.out.println(paciente.toString());
+		System.out.println(paciente.getApellido());
 		dao.create(paciente);
 		System.out.println();
 		response.sendRedirect("/insertaPaciente.jsp");
