@@ -125,7 +125,7 @@
                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                                 <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                                 <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                <p>&COPY; 2020 Todos los derechos reservados | Realizado por Henry Guaman</p>
+                                <p>&COPY; 2020 Todos los derechos reservados | Realizado por Marcelo Durazno</p>
                             </ul>
                         </div>
                     </div>

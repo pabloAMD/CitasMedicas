@@ -15,6 +15,7 @@ public class OrdenMedica implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
+	
 	private String receta;
 	
 	@OneToOne(cascade = CascadeType.ALL, mappedBy = "recetaMedica")
@@ -23,6 +24,15 @@ public class OrdenMedica implements Serializable {
 	public OrdenMedica() {
 		
 	}
+	
+	
+
+	public OrdenMedica(String receta) {
+		
+		this.receta = receta;
+	}
+
+
 
 	public int getId() {
 		return id;
@@ -56,20 +66,14 @@ public class OrdenMedica implements Serializable {
 		return result;
 	}
 
+
+
 	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		OrdenMedica other = (OrdenMedica) obj;
-		if (id != other.id)
-			return false;
-		return true;
+	public String toString() {
+		return "OrdenMedica [receta=" + receta + "]";
 	}
- 
+
+
 	
 	
 }

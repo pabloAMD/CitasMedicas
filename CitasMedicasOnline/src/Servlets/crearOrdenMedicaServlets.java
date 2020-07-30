@@ -12,9 +12,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import Dao.AgendaDao;
+
 import Dao.DaoFactory;
-import modelo.Agenda;
+import Dao.OrdenMedicaDao;
+import modelo.OrdenMedica;
+
 
 
 
@@ -22,19 +24,19 @@ import modelo.Agenda;
 /**
  * Servlet implementation class InsertarUsuarioServlet
  */
-@WebServlet(name ="/InsertarAgendaServlet", urlPatterns = {"/insertar-agenda"})
-public class InsertarAgendaServlets extends HttpServlet {
+@WebServlet(name ="/crearOrdenMedicaServlets", urlPatterns = {"/insertar-orden"})
+public class crearOrdenMedicaServlets extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
-	AgendaDao dao = DaoFactory.getFactory().getAgendaDao();
 	
-	Agenda agenda = new Agenda();
-       
+	OrdenMedicaDao dao= DaoFactory.getFactory().getOrdenMedicaDao();
+	OrdenMedica ordenMedica = new OrdenMedica();
+	
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public InsertarAgendaServlets() {
-        super();
+    public crearOrdenMedicaServlets() {
+    	super();
         // TODO Auto-generated constructor stub
     }
 
@@ -53,24 +55,24 @@ public class InsertarAgendaServlets extends HttpServlet {
 		// TODO Auto-generated method stub
 		HttpSession session=request.getSession(true);
 		
-		String notas=request.getParameter("notas");
-		String fecha=request.getParameter("fecha");
+		String receta=request.getParameter("receta");
+		
 		
 		System.out.println("Mostrando datos");
+		System.out.println("receta es: "+receta);
 		
-		AgendaDao dao = DaoFactory.getFactory().getAgendaDao();
+		OrdenMedicaDao dao= DaoFactory.getFactory().getOrdenMedicaDao();
+		OrdenMedica ordenMedica = new OrdenMedica();
 		
-		Agenda agenda = new Agenda();
-		agenda.setNotas(notas);
-		agenda.setFecha(fecha);
+		ordenMedica.setReceta(receta);
 		
 		
 			
 		System.out.println("Valores");
-		System.out.println(agenda.toString());
-		dao.create(agenda);
+		System.out.println(ordenMedica.toString());
+		dao.create(ordenMedica);
 		System.out.println();
-		response.sendRedirect("/crearAgenda.jsp");
+		response.sendRedirect("/crearOrdenMedica.jsp");
 		
 	}
 	

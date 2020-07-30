@@ -49,6 +49,39 @@ public class CitaMedica implements Serializable{
 		
 	}
 
+	
+	
+	public CitaMedica(int id, Paciente paciente, Factura factura, Medico medico, HistoriaClinica historiaClinica,
+			Consulta consultaCitaMedica, String motivo, int turno, String fecha, double precio) {
+		super();
+		this.id = id;
+		this.paciente = paciente;
+		this.factura = factura;
+		this.medico = medico;
+		this.historiaClinica = historiaClinica;
+		this.consultaCitaMedica = consultaCitaMedica;
+		this.motivo = motivo;
+		this.turno = turno;
+		this.fecha = fecha;
+		this.precio = precio;
+	}
+
+
+
+	public CitaMedica(Medico medico, HistoriaClinica historiaClinica, Consulta consultaCitaMedica, String motivo,
+			int turno, String fecha, double precio) {
+		
+		this.medico = medico;
+		this.historiaClinica = historiaClinica;
+		this.consultaCitaMedica = consultaCitaMedica;
+		this.motivo = motivo;
+		this.turno = turno;
+		this.fecha = fecha;
+		this.precio = precio;
+	}
+
+
+
 	public int getId() {
 		return id;
 	}

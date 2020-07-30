@@ -4,7 +4,7 @@
 <html>
 <head>
 
-<title>Crear Secretaria</title>
+<title>Crear Orden Medica</title>
 <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
@@ -38,7 +38,6 @@
     <![endif]-->
 </head>
 <body>
-
 <!-- Start header -->
     <header class="top-header">
         <nav class="navbar header-nav navbar-expand-lg">
@@ -74,42 +73,18 @@
 
                 <div class="col-lg-10 offset-lg-1 margin-top_30">
                     <div class="full text_align_center">
-                    <h2>Crear Secretaria</h2>
-                    	 <form action="insertar-secretaria" method="POST" class = "ui form">
+                    <h2>Crear Orden Medica</h2>
+                    <form action="/insertar-orden" method="POST"  class = "ui form">
                         <div class="modal-body">
                             <div class="form-group">
-                                <label for="nombre">Nombre</label>
-                                <input type="text" class="form-control" id="nombre" name="nombre" required="" placeholder="Marcelo" >
-                            </div>
+                                <label for="nombre">Descripcion Orden Medica</label>
+                                <input type="text" class="form-control" id="receta" name="receta" required="" placeholder="descripcion de orden medica" >
+                            </div>  
                             <div class="form-group">
-                                <label for="nombre">Apellido</label>
-                                <input type="text" class="form-control" id="apellido" name="apellido" required="" placeholder="Durazno" >
+                                <label for="nombre">Fecha</label>
+                                <input type="text" class="form-control" id="fecha" name="fecha" required="" placeholder="yyyy-mm-dd" >
                             </div>
-                            <div class="form-group">
-                                <label for="nombre">Direccion</label>
-                                <input type="text" class="form-control" id="direccion" name="direccion" required="" placeholder="P cordova" >
-                            </div>
-                            
-                           <div class="form-group">
-                                <label for="nombre">Telefono</label>
-                                <input type="text" class="form-control" id="telefono" name="telefono" required="" placeholder="4031738" >
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="nombre">Cedula</label>
-                                <input type="text" class="form-control" id="cedula" name="cedula" required="" placeholder="010323423" >
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="nombre">Email</label>
-                                <input type="text" class="form-control" id="email" name="email" required="" placeholder="tdurazno@ups.edu.ec" >
-                            </div>
-                            <div class="form-group">
-                                <label for="nombre">Sueldo</label>
-                                <input type="text" class="form-control" id="sueldo" name="sueldo" required="" placeholder="360.00" >
-                            </div>
-                           
-                            
+                             
                         </div>
                         <div class="modal-footer">
                             <button type="button"  data-dismiss="modal">Cerrar</button>
@@ -125,8 +100,7 @@
     </div>
     <!-- end section -->
  
-        
-         <!-- Start Footer -->
+          <!-- Start Footer -->
     <footer class="footer-box">
         <div class="container">
             <div class="row">
@@ -150,7 +124,7 @@
                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                                 <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                                 <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                <p>&COPY; 2020 Todos los derechos reservados | Realizado por Marcelo Durazno</p>
+                                <p>&COPY; 2020 Todos los derechos reservados | Realizado por Henry Guaman</p>
                             </ul>
                         </div>
                     </div>
@@ -192,6 +166,6 @@
     <script src="plantillas/js/contact-form-script.js"></script>
     <script src="plantillas/js/isotope.min.js"></script>
     <script src="plantillas/js/images-loded.min.js"></script>
-    <script src="plantillas/js/custom.js"></script> 
+    <script src="plantillas/js/custom.js"></script>
 </body>
 </html>

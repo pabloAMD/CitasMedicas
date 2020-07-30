@@ -77,6 +77,24 @@ public class Medico  implements Serializable{
 
 
 
+	public Medico(String nombre, String apellido, String direccion, String telefono, String cedula, String email,
+			String horarioAtencion, double sueldo, CitaMedica citamedica, Secretaria secretaria) {
+		super();
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.direccion = direccion;
+		this.telefono = telefono;
+		this.cedula = cedula;
+		this.email = email;
+		this.horarioAtencion = horarioAtencion;
+		this.sueldo = sueldo;
+		this.citamedica = citamedica;
+		this.secretaria = secretaria;
+	}
+
+
+
+
 	public int getId_medico() {
 		return id_medico;
 	}
