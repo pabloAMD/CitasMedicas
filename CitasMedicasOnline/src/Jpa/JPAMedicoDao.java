@@ -36,11 +36,12 @@ public class JPAMedicoDao extends JPAGenericDao<Medico, String>  implements Medi
 
 
 
-	public Medico buscarMedico(String id) {
+	public Medico buscarMedico(String cedula) {
 		Medico medico = null;  
-        String jpql = "SELECT m FROM Medico m WHERE m.id_medico = " + id ;
+        String jpql = "SELECT m FROM Medico m WHERE m.id_medico = " + cedula ;
         medico =  (Medico) em.createQuery(jpql).getSingleResult();
         em.createQuery(jpql).getSingleResult();
+        System.out.println("medico encontrado : "+ medico.toString());
     return medico;
 	}
 

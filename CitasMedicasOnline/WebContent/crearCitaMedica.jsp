@@ -75,17 +75,20 @@
                 <div class="col-lg-10 offset-lg-1 margin-top_30">
                     <div class="full text_align_center">
                     <h2>Generar Cita Medica</h2>
-                    	 <form action="insertar-medico" method="POST" class = "ui  form">
+                    	 <form action="insertar-cita" method="POST" class = "ui  form">
                         <div class="modal-body">
                         
                         	
                         	<div class="form-group">
-                               <input class="form-group" type="search" placeholder="Cedula medico" aria-label="Search">
+                              	<label for="nombre">Cedula del Medico</label>
+                                <input type="text" class="form-control" id="ceduMedico" name="ceduMedico" required="" placeholder="22-01-1993" >
+                                <button type="submit" >Buscar</button>
+                                
     							<button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="accion" value="Buscar">Buscar</button>
                             </div>
                         	
                         	<div class="form-group">
-                               <input class="form-group" type="search" placeholder="Cedula paciente" aria-label="Search">
+                               <input type="text" class="form-control" id="nombre" name="nombre" required="" placeholder="22-01-1993" >
     						<button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="accion" value="Buscar">Buscar</button>
     						
                             </div>

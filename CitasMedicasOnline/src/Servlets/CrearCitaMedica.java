@@ -20,7 +20,7 @@ import modelo.Paciente;
 /**
  * Servlet implementation class CrearCitaMedica
  */
-@WebServlet("/CrearCitaMedica")
+@WebServlet(name ="/CrearCitaMedicaServlet", urlPatterns = {"/insertar-cita"})
 public class CrearCitaMedica extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
